@@ -1,0 +1,8 @@
+1. DataSentry — Intelligent Dataset Quality Investigator
+Best overall
+
+Rating: 9.5/10 · Difficulty: Easy–Medium · Time: 3–5 weeks
+Problem: Poor-quality data causes incorrect analysis and unreliable machine learning models.
+Features: Upload CSV/Excel files, detect missing values, duplicate rows, outliers, inconsistent formats, generate a data quality score, and download cleaned data.
+Technologies: Python, Pandas, Streamlit, Plotly, scikit-learn.
+Resume value: Excellent demonstration of data preprocessing, statistics, data visualization, and web app development.

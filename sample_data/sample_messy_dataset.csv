@@ -1,0 +1,29 @@
+customer_id,name,age,salary,department,join_date,satisfaction_score,is_active
+101,  Alice Smith  ,28,65000,Engineering,2021-01-15,8.5,True
+102,Bob Jones,34,72000,Marketing,2020-03-22,7.0,True
+103,Charlie Brown,45,110000,Engineering,2018-07-11,9.0,True
+104,Diana Prince,29,68000,marketing,2021-09-01,6.5,False
+105,Evan Wright,,55000,Sales,2022-02-14,5.0,True
+106,Fiona Gallagher,38,89000,Engineering,2019-11-30,8.0,True
+107,George Clark,150,95000,sales,2017-05-20,7.5,False
+108,Hannah Abbott,26,48000,MARKETING ,2023-01-10,6.0,True
+109,Ian Malcolm,52,145000,Engineering,2015-08-19,,True
+110,Julia Roberts,31,71000,Sales,2020-12-05,8.0,False
+111,Kevin Bacon,40,-5000,Engineering,2018-04-16,7.2,True
+112,Laura Croft,33,85000,Marketing,2021-06-30,9.5,True
+113,Michael Scott,42,99999999,Sales,invalid_date,4.0,True
+114,Nina Myers,,62000,Engineering,2022-08-14,6.8,False
+115,Oscar Martinez,36,78000,Finance,2019-03-25,8.8,True
+102,Bob Jones,34,72000,Marketing,2020-03-22,7.0,True
+116,Pam Beesly,30,52000,sales,2021-10-12,7.5,True
+117,Quinn Fabray,24,45000,Marketing,2023-05-01,6.2,False
+118,Ryan Howard,27,51000,sales,2022-11-18,5.5,True
+119,Stanley Hudson,58,92000,Sales,2014-02-10,6.0,True
+120,Toby Flenderson,44,76000,HR,2017-09-15,4.5,False
+121,Ursula Buffay,-5,63000,Finance,2020-07-08,7.0,True
+122,Victor Stone,29,82000,Engineering,2021-04-03,8.5,True
+123,Wendy Darling,35,74000,Marketing,2019-08-27,7.8,True
+102,Bob Jones,34,72000,Marketing,2020-03-22,7.0,True
+124,Xavier Woods,37,88000,Engineering,2018-10-09,8.2,True
+125,Yvonne Strahovski,32,77000,Finance,2020-01-19,9.0,False
+126,Zachary Levi,41,94000,Engineering,2017-12-01,8.0,True
