@@ -29,8 +29,8 @@ from sklearn.metrics import root_mean_squared_error, mean_absolute_error, r2_sco
 
 
 class UpgradedGranule:
-    """Enhanced interval granule with local density tracking."""
-    def __init__(self, attribute: str, index: int, start: float, end: float, centroid: float, values_sample: np.ndarray):
+    """Enhanced interval granule with local density tracking and finite domain awareness."""
+    def __init__(self, attribute: str, index: int, start: float, end: float, centroid: float, values_sample: np.ndarray, vmin: float, vmax: float):
         self.attribute = attribute
         self.index = index
         self.start = float(start)
@@ -38,6 +38,10 @@ class UpgradedGranule:
         self.centroid = float(centroid)
         self.label = f"{attribute}_G{index}"
         self.sample_size = len(values_sample)
+        self.vmin = float(vmin)
+        self.vmax = float(vmax)
+        self.eff_start = vmin if np.isinf(start) else float(start)
+        self.eff_end = vmax if np.isinf(end) else float(end)
         self.density_median = float(np.median(values_sample)) if len(values_sample) > 0 else self.centroid
 
     def contains(self, value: float) -> bool:
@@ -46,19 +50,19 @@ class UpgradedGranule:
         return self.start <= value <= self.end
 
     def get_relative_position(self, value: float) -> float:
-        """Returns relative position alpha in [0, 1] within granule interval."""
-        width = self.end - self.start
-        if width <= 0 or np.isinf(width):
+        """Returns relative position alpha in [0, 1] within granule interval using effective boundaries."""
+        width = self.eff_end - self.eff_start
+        if width <= 1e-9:
             return 0.5
-        val_clamped = max(self.start, min(self.end, value))
-        return (val_clamped - self.start) / width
+        val_clamped = max(self.eff_start, min(self.eff_end, value))
+        return max(0.01, min(0.99, (val_clamped - self.eff_start) / width))
 
-    def reconstruct_from_alpha(self, alpha: float) -> float:
-        """Interpolate continuous value using antecedent relative position alpha."""
-        alpha_clamped = max(0.05, min(0.95, alpha))
-        if np.isinf(self.start) or np.isinf(self.end):
-            return self.density_median
-        return self.start + (alpha_clamped * (self.end - self.start))
+    def reconstruct_from_alpha(self, alpha: float, sign: float = 1.0) -> float:
+        """Interpolate continuous value using antecedent relative position alpha and inter-feature correlation sign."""
+        eff_alpha = alpha if sign >= 0 else (1.0 - alpha)
+        eff_alpha = max(0.01, min(0.99, eff_alpha))
+        width = self.eff_end - self.eff_start
+        return self.eff_start + (eff_alpha * width)
 
     def __repr__(self) -> str:
         return f"{self.label}[{self.start:.2f}, {self.end:.2f}]"
@@ -86,12 +90,13 @@ class UpgradedGardaImputer:
         self.r_conf = r_conf
         self.granules_per_attr: Dict[str, List[UpgradedGranule]] = {}
         self.optimal_k_per_attr: Dict[str, int] = {}
+        self.corr_matrix: Dict[str, Dict[str, float]] = {}
 
     def _determine_optimal_k(self, values: np.ndarray) -> int:
         """Freedman-Diaconis optimal bin estimator bounded for IoT sensor clusters."""
         n = len(values)
         if n < 8:
-            return 3
+            return 4
         q25, q75 = np.percentile(values, [25, 75])
         iqr = q75 - q25
         if iqr > 0:
@@ -99,20 +104,24 @@ class UpgradedGardaImputer:
             data_range = np.max(values) - np.min(values)
             if h > 0:
                 k_opt = int(np.ceil(data_range / h))
-                return max(4, min(25, k_opt))
+                return max(6, min(16, k_opt * 2))
         return 8
 
     def _build_adaptive_granules(self, df: pd.DataFrame, numeric_cols: List[str]):
         """Create adaptive quantile-seeded granules for each continuous feature."""
         self.granules_per_attr.clear()
         self.optimal_k_per_attr.clear()
+        self.corr_matrix = df[numeric_cols].corr().fillna(0).to_dict()
 
         for col in numeric_cols:
             vals = df[col].dropna().values
             if len(vals) == 0:
                 continue
 
+            vmin = float(np.min(vals))
+            vmax = float(np.max(vals))
             k = self._determine_optimal_k(vals)
+            k = min(k, len(np.unique(vals)))
             self.optimal_k_per_attr[col] = k
 
             # Seed K-Means using quantiles for distribution adaptation
@@ -160,7 +169,7 @@ class UpgradedGardaImputer:
                     g_end = (cur["end"] + nxt["start"]) / 2.0
 
                 granules.append(
-                    UpgradedGranule(col, cur["idx"], g_start, g_end, cur["centroid"], cur["vals"])
+                    UpgradedGranule(col, cur["idx"], g_start, g_end, cur["centroid"], cur["vals"], vmin, vmax)
                 )
 
             self.granules_per_attr[col] = granules
@@ -333,11 +342,11 @@ class UpgradedGardaImputer:
 
                         # Calculate relative alpha from antecedent continuous value
                         ant_attr = item_to_attr[best["ant"]]
-                        ant_val = result_df.at[row_idx, ant_attr]
+                        ant_val = result_df.iloc[row_idx][ant_attr]
                         if not pd.isna(ant_val):
                             ant_granule = item_to_granule[best["ant"]]
                             alpha = ant_granule.get_relative_position(float(ant_val))
-                            imputed_cell_alphas[(row_idx, target_col)] = alpha
+                            imputed_cell_alphas[(row_idx, target_col)] = (alpha, ant_attr)
 
         # 4. Iterative Relaxation with Entropy Safeguards
         y = 1
@@ -386,11 +395,11 @@ class UpgradedGardaImputer:
                             relaxed_rules_count += 1
 
                             ant_attr = item_to_attr[best["ant"]]
-                            ant_val = result_df.at[row_idx, ant_attr]
+                            ant_val = result_df.iloc[row_idx][ant_attr]
                             if not pd.isna(ant_val):
                                 ant_granule = item_to_granule[best["ant"]]
                                 alpha = ant_granule.get_relative_position(float(ant_val))
-                                imputed_cell_alphas[(row_idx, target_col)] = alpha
+                                imputed_cell_alphas[(row_idx, target_col)] = (alpha, ant_attr)
             y += 1
 
         # 5. Localized Density & Continuous Antecedent Reconstruction (LDR)
@@ -400,9 +409,11 @@ class UpgradedGardaImputer:
                     assigned_label = discrete_dataset[row_idx].get(col)
                     if assigned_label and assigned_label in item_to_granule:
                         con_granule = item_to_granule[assigned_label]
-                        alpha = imputed_cell_alphas.get((row_idx, col))
-                        if alpha is not None:
-                            recon_val = con_granule.reconstruct_from_alpha(alpha)
+                        alpha_info = imputed_cell_alphas.get((row_idx, col))
+                        if alpha_info is not None:
+                            alpha_val, ant_name = alpha_info
+                            corr_sign = self.corr_matrix.get(ant_name, {}).get(col, 1.0)
+                            recon_val = con_granule.reconstruct_from_alpha(alpha_val, sign=corr_sign)
                         else:
                             recon_val = con_granule.centroid
                         result_df.iat[row_idx, result_df.columns.get_loc(col)] = recon_val
