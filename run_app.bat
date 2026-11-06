@@ -4,12 +4,15 @@ cd /d "%~dp0"
 echo ======================================================================
 echo             DataSentry - Launching Local Application
 echo ======================================================================
-echo Checking Python Virtual Environment...
-if exist ".venv\Scripts\Activate.ps1" (
+
+:: Check if virtual environment exists
+if exist ".venv\Scripts\python.exe" (
     echo Activating .venv and launching Streamlit...
-    ".venv\Scripts\python.exe" -m streamlit run app.py
+    start "" "http://localhost:8501"
+    ".venv\Scripts\python.exe" -m streamlit run app.py --server.port 8501
 ) else (
-    echo Virtual environment not found! Running with system python...
-    python -m streamlit run app.py
+    echo Running with system python...
+    start "" "http://localhost:8501"
+    python -m streamlit run app.py --server.port 8501
 )
 pause
