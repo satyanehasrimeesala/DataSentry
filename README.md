@@ -271,7 +271,21 @@ When presenting DataSentry to your university project evaluation panel, use the 
 
 ---
 
-## 📜 10. References
+## 💼 11. Resume Project Bullets (Ready to Paste on Your Resume)
+
+If you are a student or graduate applying for Data Science, Machine Learning, or Software Engineering roles, add this project to your resume under **Projects**:
+
+### **DataSentry — Intelligent Dataset Quality Investigator & Research Suite**
+*Python, Streamlit, Pandas, NumPy, Scikit-learn, Plotly, Pytest, Git*
+- Architected and built an end-to-end, 100% offline dataset quality investigation and remediation platform processing CSV and multi-sheet Excel files with zero cloud API dependencies.
+- Engineered an explainable 4-dimensional **Data Quality Score (0–100)** evaluating Completeness (35%), Uniqueness (25%), Validity (20%), and Consistency (20%) with dynamic radar chart breakdowns and deduction auditing.
+- Implemented robust defect remediation engines covering 10 missing-value strategies (KNN, Mode, FFill/BFill), exact/subset deduplication, string harmonization, and **Modified Z-Score Outlier Detection using Median Absolute Deviation (MAD)** based on IEEE Access (2024).
+- Researched and upgraded the IEEE IoT Journal (2026) **GARDA** algorithm (**GARDA+**), integrating Freedman-Diaconis adaptive granulation, correlation sign-coupled localized density reconstruction (LDR), and Shannon entropy gating, **reducing imputation RMSE by 42.36%** over the base paper.
+- Developed a non-destructive state management workflow engine featuring immutable raw storage, linear Undo/Reset stacks, comparative delta metrics, and automated multi-format export (Cleaned CSV/XLSX, Text Audit, and Printable Executive HTML/PDF Reports).
+
+---
+
+## 📜 12. References
 
 1. **Base Paper**: D'Aniello, G., Della Corte, M., Gaeta, R., & Hong, T.-P. (2026). *GARDA: Granular Association-Rule-Based Data Imputation Approach for IoT Sensor Networks*. **IEEE Internet of Things Journal**, 13(17), 38900–38914.
 2. **Reference Paper 1**: Al-Jamali, N. A. S., Al-Saedi, I. R. K., Zarzoor, A. R., & Li, H. (2023). *A New Imputation Technique Based a Multi-Spike Neural Network to Handle Missing Data in the Internet of Things Network (IoT)*. **IEEE Access**, 11, 112841–112850.

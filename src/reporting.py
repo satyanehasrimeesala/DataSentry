@@ -88,6 +88,112 @@ def generate_comparison_report(
     }
 
 
+def export_report_to_html(report_dict: Dict[str, Any], original_filename: str) -> str:
+    """Generate professional, printable HTML executive summary report with modern styling."""
+    score_data = report_dict.get("quality_score", {})
+    init_score = score_data.get("initial_score", 0)
+    final_score = score_data.get("final_score", 0)
+    delta = score_data.get("score_delta", 0)
+    delta_color = "#16A34A" if delta >= 0 else "#DC2626"
+
+    audit_rows = ""
+    for entry in report_dict.get("audit_log", []):
+        audit_rows += f"""
+        <tr>
+            <td><strong>Step {entry.get('step')}</strong></td>
+            <td><code>{entry.get('action')}</code></td>
+            <td>{entry.get('description')}</td>
+            <td>{entry.get('rows_before')} &rarr; {entry.get('rows_after')}</td>
+            <td>{entry.get('timestamp')}</td>
+        </tr>
+        """
+
+    if not audit_rows:
+        audit_rows = "<tr><td colspan='5' style='text-align:center;'>No cleaning operations applied.</td></tr>"
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DataSentry Investigation Report - {original_filename}</title>
+    <style>
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 40px; color: #1E293B; background: #F8FAFC; }}
+        .container {{ max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }}
+        h1 {{ color: #1E3A8A; margin-bottom: 4px; }}
+        .meta {{ color: #64748B; font-size: 0.95rem; margin-bottom: 24px; }}
+        .card-grid {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0; }}
+        .card {{ background: #F1F5F9; border-radius: 8px; padding: 16px; text-align: center; }}
+        .card-val {{ font-size: 1.8rem; font-weight: 700; color: #0F172A; }}
+        .card-lbl {{ font-size: 0.8rem; text-transform: uppercase; color: #64748B; letter-spacing: 0.05em; }}
+        .score-box {{ background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 8px; padding: 20px; display: flex; justify-content: space-between; align-items: center; margin: 24px 0; }}
+        table {{ width: 100%; border-collapse: collapse; margin-top: 16px; }}
+        th, td {{ padding: 12px; border-bottom: 1px solid #E2E8F0; text-align: left; font-size: 0.9rem; }}
+        th {{ background: #F8FAFC; color: #475569; }}
+        .badge {{ display: inline-block; padding: 4px 10px; border-radius: 999px; font-weight: 600; font-size: 0.85rem; }}
+        @media print {{ body {{ margin: 0; background: white; }} .container {{ box-shadow: none; padding: 0; }} }}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ DataSentry Investigation Report</h1>
+        <div class="meta">Original File: <strong>{original_filename}</strong> | Generated: {report_dict.get('timestamp')}</div>
+
+        <div class="score-box">
+            <div>
+                <h3 style="margin: 0; color: #1E40AF;">Composite Quality Score</h3>
+                <div style="font-size: 0.9rem; color: #64748B;">Completeness (35%) &bull; Uniqueness (25%) &bull; Validity (20%) &bull; Consistency (20%)</div>
+            </div>
+            <div style="text-align: right;">
+                <div style="font-size: 2.2rem; font-weight: 800; color: #1E3A8A;">{final_score} <span style="font-size: 1.2rem; color: #64748B;">/ 100</span></div>
+                <div style="font-weight: 600; color: {delta_color};">{delta:+0.1f} pts ({init_score} &rarr; {final_score})</div>
+            </div>
+        </div>
+
+        <h3>📊 Summary of Remediated Defects</h3>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-val">{report_dict['missing_values']['resolved_count']}</div>
+                <div class="card-lbl">Missing Cells Resolved</div>
+            </div>
+            <div class="card">
+                <div class="card-val">{report_dict['duplicates']['removed_count']}</div>
+                <div class="card-lbl">Duplicates Purged</div>
+            </div>
+            <div class="card">
+                <div class="card-val">{report_dict['outliers']['resolved_count']}</div>
+                <div class="card-lbl">Outliers Remediated</div>
+            </div>
+            <div class="card">
+                <div class="card-val">{report_dict['consistency']['resolved_issues']}</div>
+                <div class="card-lbl">Formatting Fixed</div>
+            </div>
+        </div>
+
+        <h3>📝 Execution Audit Trail</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Step</th>
+                    <th>Action</th>
+                    <th>Description</th>
+                    <th>Row Delta</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {audit_rows}
+            </tbody>
+        </table>
+
+        <div style="margin-top: 40px; font-size: 0.8rem; color: #94A3B8; text-align: center;">
+            DataSentry &bull; Academic Research & Engineering Major Project &bull; 100% Offline Local Engine
+        </div>
+    </div>
+</body>
+</html>"""
+    return html
+
+
 def export_dataframe_to_csv_bytes(df: pd.DataFrame) -> bytes:
     """Export DataFrame as utf-8 CSV bytes buffer."""
     buffer = io.StringIO()

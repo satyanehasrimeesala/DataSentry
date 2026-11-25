@@ -32,7 +32,8 @@ from src.reporting import (
     export_dataframe_to_csv_bytes,
     export_dataframe_to_excel_bytes,
     export_report_to_json_bytes,
-    export_report_to_text
+    export_report_to_text,
+    export_report_to_html
 )
 
 
@@ -992,12 +993,12 @@ elif selected_page == "📋 Before-After & Export":
         base_name = os.path.splitext(original_fn)[0]
         timestamp_str = time.strftime("%Y%m%d_%H%M%S")
 
-        exp_c1, exp_c2, exp_c3 = st.columns(3)
+        exp_c1, exp_c2, exp_c3, exp_c4 = st.columns(4)
 
         with exp_c1:
             csv_bytes = export_dataframe_to_csv_bytes(curr_df)
             st.download_button(
-                label="📥 Download Cleaned CSV",
+                label="📥 Cleaned CSV",
                 data=csv_bytes,
                 file_name=f"DataSentry_Cleaned_{base_name}_{timestamp_str}.csv",
                 mime="text/csv",
@@ -1007,7 +1008,7 @@ elif selected_page == "📋 Before-After & Export":
         with exp_c2:
             xlsx_bytes = export_dataframe_to_excel_bytes(curr_df)
             st.download_button(
-                label="📥 Download Cleaned Excel (.xlsx)",
+                label="📥 Cleaned Excel (.xlsx)",
                 data=xlsx_bytes,
                 file_name=f"DataSentry_Cleaned_{base_name}_{timestamp_str}.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
@@ -1017,9 +1018,19 @@ elif selected_page == "📋 Before-After & Export":
         with exp_c3:
             report_text = export_report_to_text(comp, original_filename=original_fn)
             st.download_button(
-                label="📄 Download Quality Report (.txt)",
+                label="📄 Audit Log (.txt)",
                 data=report_text,
                 file_name=f"DataSentry_Report_{base_name}_{timestamp_str}.txt",
                 mime="text/plain",
+                use_container_width=True
+            )
+
+        with exp_c4:
+            report_html = export_report_to_html(comp, original_filename=original_fn)
+            st.download_button(
+                label="🖨️ Executive Summary (HTML/PDF)",
+                data=report_html.encode("utf-8"),
+                file_name=f"DataSentry_Executive_Report_{base_name}_{timestamp_str}.html",
+                mime="text/html",
                 use_container_width=True
             )
