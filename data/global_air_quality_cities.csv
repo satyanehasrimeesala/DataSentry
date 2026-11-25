@@ -1,0 +1,804 @@
+station_id,city,pm25_concentration_ugm3,pm10_concentration_ugm3,no2_ppb,so2_ppb,co_ppm,air_quality_category
+STN-ENV-0001,Beijing,63.72,101.95,27.54,7.65,0.698,Uncalculated
+STN-ENV-0002,Paris,24.52,35.87,10.5,3.78,0.22,Uncalculated
+STN-ENV-0003,Tokyo,15.6,32.19,7.96,2.26,0.298,Uncalculated
+STN-ENV-0004,Beijing,99.96,152.77,46.92,15.3,0.952,Uncalculated
+STN-ENV-0005,Tokyo,21.59,31.2,14.77,3.21,0.213,Uncalculated
+STN-ENV-0006,Paris,33.8,58.54,13.14,3.6,0.428,Uncalculated
+STN-ENV-0007,Tokyo,8.29,22.09,6.05,3.43,0.269,Uncalculated
+STN-ENV-0008,Tokyo,15.16,26.66,8.95,5.1,0.068,Uncalculated
+STN-ENV-0009,New York,29.15,47.89,5.2,5.19,0.219,Uncalculated
+STN-ENV-0010,Berlin,12.34,18.29,3.05,2.75,0.062,Uncalculated
+STN-ENV-0011,Delhi,168.2,271.86,71.83,25.43,2.089,Uncalculated
+STN-ENV-0012,Sydney,15.4,25.29,8.27,3.76,0.197,Uncalculated
+STN-ENV-0013,Delhi,139.01,218.64,63.57,17.19,1.524,Uncalculated
+STN-ENV-0014,Delhi,90.25,142.85,41.69,13.53,1.093,Uncalculated
+STN-ENV-0015,London,19.39,26.69,7.81,2.05,0.388,Uncalculated
+STN-ENV-0016,New York,30.02,48.1,12.9,4.72,0.387,Uncalculated
+STN-ENV-0017,Sydney,16.62,27.4,7.39,4.13,0.216,Uncalculated
+STN-ENV-0018,Beijing,89.42,151.24,39.03,13.44,1.095,Uncalculated
+STN-ENV-0019,Beijing,64.23,99.79,31.24,9.09,0.812,Uncalculated
+STN-ENV-0020,Beijing,121.94,194.2,51.66,16.19,1.337,Uncalculated
+STN-ENV-0021,Delhi,,276.27,73.58,25.15,2.002,Uncalculated
+STN-ENV-0022,Berlin,,32.5,6.97,3.21,0.158,Uncalculated
+STN-ENV-0023,Delhi,,245.55,67.29,21.54,1.776,Uncalculated
+STN-ENV-0024,Sydney,,19.36,2.47,-1.07,0.223,Uncalculated
+STN-ENV-0025,Berlin,,23.2,8.78,5.81,0.128,Uncalculated
+STN-ENV-0026,New York,,29.05,9.04,4.09,0.251,Uncalculated
+STN-ENV-0027,Berlin,,34.17,8.38,3.31,0.165,Uncalculated
+STN-ENV-0028,Sydney,,18.29,4.48,3.75,0.171,Uncalculated
+STN-ENV-0029,Tokyo,,36.59,7.87,3.73,0.375,Uncalculated
+STN-ENV-0030,Delhi,,128.82,35.25,13.78,0.907,Uncalculated
+STN-ENV-0031,Beijing,,210.45,58.38,21.69,1.666,Uncalculated
+STN-ENV-0032,Tokyo,,25.58,6.68,0.83,0.204,Uncalculated
+STN-ENV-0033,Delhi,,285.8,78.38,27.32,1.878,Uncalculated
+STN-ENV-0034,Paris,,53.02,14.38,6.38,0.299,Uncalculated
+STN-ENV-0035,London,,23.83,8.25,0.88,0.173,Uncalculated
+STN-ENV-0036,Delhi,,222.66,57.3,19.33,1.675,Uncalculated
+STN-ENV-0037,Paris,12.54,24.3,8.29,0.66,0.176,Uncalculated
+STN-ENV-0038,Sydney,14.07,19.65,7.88,3.45,0.1,Uncalculated
+STN-ENV-0039,New York,23.07,43.27,11.75,3.89,0.424,Uncalculated
+STN-ENV-0040,Paris,22.85,28.67,12.95,0.52,0.268,Uncalculated
+STN-ENV-0041,New York,26.14,39.79,11.81,4.43,0.294,Uncalculated
+STN-ENV-0042,Delhi,141.31,224.55,65.45,20.82,1.77,Uncalculated
+STN-ENV-0043,New York,25.34,41.3,10.01,3.63,0.306,Uncalculated
+STN-ENV-0044,Paris,29.77,37.78,15.94,3.21,0.614,Uncalculated
+STN-ENV-0045,Berlin,16.39,32.99,8.03,2.98,0.176,Uncalculated
+STN-ENV-0046,London,850.0,27.39,2.99,3.95,0.225,Uncalculated
+STN-ENV-0047,Tokyo,10.25,22.01,7.72,0.57,0.048,Uncalculated
+STN-ENV-0048,Tokyo,18.55,37.75,7.96,0.26,0.31,Uncalculated
+STN-ENV-0049,London,22.26,31.91,9.21,2.88,0.298,Uncalculated
+STN-ENV-0050,Beijing,56.87,78.53,24.26,9.67,0.649,Uncalculated
+STN-ENV-0051,Tokyo,24.39,44.76,9.87,3.03,0.205,Uncalculated
+STN-ENV-0052,Sydney,9.53,13.82,4.98,-0.82,-0.017,Uncalculated
+STN-ENV-0053,Delhi,66.38,100.54,26.91,11.1,0.838,Uncalculated
+STN-ENV-0054,Beijing,116.76,189.71,47.84,19.64,1.262,Uncalculated
+STN-ENV-0055,Delhi,70.94,125.83,28.73,10.67,0.982,Uncalculated
+STN-ENV-0056,Paris,29.79,47.11,14.55,2.06,0.231,Uncalculated
+STN-ENV-0057,Sydney,14.16,27.42,5.89,1.65,0.152,Uncalculated
+STN-ENV-0058,Paris,25.92,36.53,15.0,4.11,0.223,Uncalculated
+STN-ENV-0059,Beijing,73.89,109.79,33.06,9.87,0.89,Uncalculated
+STN-ENV-0060,Beijing,95.68,157.66,45.59,15.23,1.151,Uncalculated
+STN-ENV-0061,Sydney,15.15,26.96,4.74,0.91,0.226,Uncalculated
+STN-ENV-0062,Sydney,9.04,12.14,2.76,1.39,-0.044,Uncalculated
+STN-ENV-0063,Beijing,105.75,177.73,47.62,15.52,1.193,Uncalculated
+STN-ENV-0064,Beijing,104.78,158.83,46.71,16.64,1.354,Uncalculated
+STN-ENV-0065,New York,23.61,31.63,9.9,3.52,0.349,Uncalculated
+STN-ENV-0066,Berlin,16.44,23.6,4.78,2.17,-0.053,Uncalculated
+STN-ENV-0067,Beijing,104.88,166.02,42.44,14.53,1.296,Uncalculated
+STN-ENV-0068,Sydney,13.52,28.97,7.98,2.08,0.059,Uncalculated
+STN-ENV-0069,Berlin,14.17,22.92,7.94,1.74,0.111,Uncalculated
+STN-ENV-0070,Beijing,77.19,122.55,32.9,10.27,0.904,Uncalculated
+STN-ENV-0071,Paris,28.91,39.91,14.15,4.58,0.503,Uncalculated
+STN-ENV-0072,Delhi,144.01,235.85,64.31,22.15,1.624,Uncalculated
+STN-ENV-0073,Berlin,24.16,32.97,14.19,3.12,0.15,Uncalculated
+STN-ENV-0074,Paris,21.95,28.75,5.94,4.69,0.308,Uncalculated
+STN-ENV-0075,Tokyo,13.5,19.6,5.7,2.42,0.159,Uncalculated
+STN-ENV-0076,Sydney,18.58,30.55,7.74,0.86,0.344,Uncalculated
+STN-ENV-0077,New York,12.76,16.81,6.22,3.92,0.118,Uncalculated
+STN-ENV-0078,New York,19.25,34.34,13.27,4.04,0.352,Uncalculated
+STN-ENV-0079,Delhi,149.79,238.25,67.03,23.97,1.799,Uncalculated
+STN-ENV-0080,Beijing,105.95,174.79,49.91,16.49,1.324,Uncalculated
+STN-ENV-0081,Paris,27.88,47.13,12.1,0.68,0.497,Uncalculated
+STN-ENV-0082,Tokyo,28.4,54.4,15.99,5.9,0.324,Uncalculated
+STN-ENV-0083,Paris,23.29,35.06,12.74,3.59,0.384,Uncalculated
+STN-ENV-0084,Sydney,9.38,19.23,3.22,1.94,0.051,Uncalculated
+STN-ENV-0085,Sydney,11.34,9.21,3.89,2.51,0.159,Uncalculated
+STN-ENV-0086,Beijing,78.2,139.58,36.65,14.63,0.794,Uncalculated
+STN-ENV-0087,Beijing,83.55,137.65,35.63,11.71,0.952,Uncalculated
+STN-ENV-0088,Sydney,9.05,13.0,4.65,0.58,0.003,Uncalculated
+STN-ENV-0089,London,23.92,36.98,9.7,2.31,0.409,Uncalculated
+STN-ENV-0090,Sydney,13.11,19.74,7.0,0.36,0.331,Uncalculated
+STN-ENV-0091,Paris,16.42,35.47,6.9,0.89,0.162,Uncalculated
+STN-ENV-0092,Delhi,173.88,282.7,76.17,23.3,2.009,Uncalculated
+STN-ENV-0093,Paris,19.13,28.39,11.92,3.51,0.098,Uncalculated
+STN-ENV-0094,New York,15.49,18.6,7.69,5.31,0.212,Uncalculated
+STN-ENV-0095,Tokyo,18.39,35.41,8.12,5.84,0.16,Uncalculated
+STN-ENV-0096,Berlin,10.65,21.23,6.05,0.32,0.073,Uncalculated
+STN-ENV-0097,Delhi,160.63,260.54,67.27,23.69,2.091,Uncalculated
+STN-ENV-0098,London,5.81,8.87,8.88,2.72,0.04,Uncalculated
+STN-ENV-0099,Tokyo,13.37,19.89,6.09,2.65,0.219,Uncalculated
+STN-ENV-0100,Tokyo,25.09,48.57,5.4,3.96,0.306,Uncalculated
+STN-ENV-0101,Berlin,15.74,34.07,10.67,1.98,0.053,Uncalculated
+STN-ENV-0102,New York,19.19,33.9,6.38,4.65,0.046,Uncalculated
+STN-ENV-0103,New York,29.01,51.26,16.18,2.74,0.397,Uncalculated
+STN-ENV-0104,New York,17.64,29.4,8.3,3.37,0.382,Uncalculated
+STN-ENV-0105,Delhi,166.72,259.9,70.31,25.53,2.032,Uncalculated
+STN-ENV-0106,Paris,31.05,44.77,14.75,4.72,0.435,Uncalculated
+STN-ENV-0107,Tokyo,20.15,37.98,9.63,4.2,0.151,Uncalculated
+STN-ENV-0108,Paris,15.33,30.9,10.35,2.35,0.285,Uncalculated
+STN-ENV-0109,Paris,20.38,37.87,10.74,2.25,0.345,Uncalculated
+STN-ENV-0110,New York,36.92,60.81,12.9,5.68,0.373,Uncalculated
+STN-ENV-0111,Paris,21.06,39.15,12.48,0.77,0.307,Uncalculated
+STN-ENV-0112,Tokyo,31.44,50.01,12.91,5.63,0.201,Uncalculated
+STN-ENV-0113,Tokyo,25.69,44.21,16.72,5.16,0.381,Uncalculated
+STN-ENV-0114,Beijing,96.03,152.62,42.15,13.42,1.095,Uncalculated
+STN-ENV-0115,London,21.49,29.09,9.03,1.88,0.135,Uncalculated
+STN-ENV-0116,Delhi,123.73,202.29,53.21,17.63,1.525,Uncalculated
+STN-ENV-0117,Paris,23.47,43.92,9.06,3.43,0.104,Uncalculated
+STN-ENV-0118,Delhi,115.89,197.8,49.86,17.71,1.425,Uncalculated
+STN-ENV-0119,Delhi,137.77,221.76,65.53,23.09,1.54,Uncalculated
+STN-ENV-0120,Delhi,92.32,142.48,37.55,16.08,0.973,Uncalculated
+STN-ENV-0121,Berlin,12.28,18.0,,3.09,0.153,Uncalculated
+STN-ENV-0122,Sydney,15.9,24.77,,2.57,0.174,Uncalculated
+STN-ENV-0123,Beijing,50.74,81.92,,6.22,0.755,Uncalculated
+STN-ENV-0124,Delhi,171.01,275.98,,28.17,1.924,Uncalculated
+STN-ENV-0125,Sydney,6.32,11.92,,0.58,0.213,Uncalculated
+STN-ENV-0126,Sydney,13.89,26.11,,2.51,0.053,Uncalculated
+STN-ENV-0127,Beijing,80.59,129.93,,13.03,1.059,Uncalculated
+STN-ENV-0128,Tokyo,23.95,27.19,,3.68,0.398,Uncalculated
+STN-ENV-0129,Berlin,17.42,29.01,,4.34,0.241,Uncalculated
+STN-ENV-0130,Paris,11.94,19.54,,2.47,0.064,Uncalculated
+STN-ENV-0131,Beijing,81.0,132.36,,13.63,0.82,Uncalculated
+STN-ENV-0132,London,20.8,31.47,9.95,3.79,0.054,Uncalculated
+STN-ENV-0133,Sydney,11.6,19.68,-0.31,1.68,0.324,Uncalculated
+STN-ENV-0134,Delhi,160.13,258.99,69.71,24.13,1.892,Uncalculated
+STN-ENV-0135,Sydney,10.31,15.69,3.42,1.45,0.013,Uncalculated
+STN-ENV-0136,Berlin,13.0,24.18,-0.08,0.02,0.042,Uncalculated
+STN-ENV-0137,London,15.0,24.35,3.42,0.75,0.197,Uncalculated
+STN-ENV-0138,Tokyo,15.68,25.87,6.25,3.46,0.149,Uncalculated
+STN-ENV-0139,Tokyo,15.64,10.41,6.72,0.46,-0.004,Uncalculated
+STN-ENV-0140,New York,35.23,50.65,17.37,4.68,0.509,Uncalculated
+STN-ENV-0141,Delhi,183.93,288.58,82.15,26.01,2.241,Uncalculated
+STN-ENV-0142,New York,25.78,42.32,12.34,3.18,0.493,Uncalculated
+STN-ENV-0143,Berlin,21.12,40.15,8.25,2.93,0.368,Uncalculated
+STN-ENV-0144,London,21.5,33.81,9.8,2.62,-0.052,Uncalculated
+STN-ENV-0145,Sydney,12.92,24.91,7.16,-0.21,0.297,Uncalculated
+STN-ENV-0146,Paris,24.98,43.21,15.66,3.47,0.421,Uncalculated
+STN-ENV-0147,New York,22.22,36.25,8.46,1.89,0.193,Uncalculated
+STN-ENV-0148,Tokyo,8.59,16.61,4.3,0.33,0.06,Uncalculated
+STN-ENV-0149,Delhi,127.08,204.56,59.79,20.17,1.566,Uncalculated
+STN-ENV-0150,Sydney,11.28,17.34,0.76,3.12,0.034,Uncalculated
+STN-ENV-0151,London,16.26,27.96,13.31,0.47,0.171,Uncalculated
+STN-ENV-0152,Beijing,73.18,124.33,36.47,13.33,0.978,Uncalculated
+STN-ENV-0153,Berlin,20.43,35.05,4.06,2.3,0.297,Uncalculated
+STN-ENV-0154,Berlin,22.65,37.32,11.3,2.5,0.205,Uncalculated
+STN-ENV-0155,Tokyo,19.35,26.57,7.01,1.56,0.334,Uncalculated
+STN-ENV-0156,Beijing,100.78,168.32,44.16,15.2,1.24,Uncalculated
+STN-ENV-0157,Berlin,22.61,29.14,11.23,6.36,0.298,Uncalculated
+STN-ENV-0158,Paris,22.2,26.99,13.14,1.02,0.215,Uncalculated
+STN-ENV-0159,Sydney,13.58,23.58,4.71,-1.05,0.162,Uncalculated
+STN-ENV-0160,Delhi,78.88,121.8,34.14,12.23,0.869,Uncalculated
+STN-ENV-0161,Sydney,10.85,22.8,6.0,2.48,-0.064,Uncalculated
+STN-ENV-0162,Paris,20.99,25.16,11.16,3.23,0.224,Uncalculated
+STN-ENV-0163,Berlin,26.27,46.85,8.8,4.83,0.303,Uncalculated
+STN-ENV-0164,Paris,26.02,45.74,16.88,2.21,0.326,Uncalculated
+STN-ENV-0165,Sydney,8.0,13.38,1.67,-0.22,0.217,Uncalculated
+STN-ENV-0166,Berlin,21.82,24.42,12.71,3.46,0.197,Uncalculated
+STN-ENV-0167,Delhi,171.84,266.33,78.68,28.41,2.025,Uncalculated
+STN-ENV-0168,Delhi,136.86,220.18,63.41,21.37,1.719,Uncalculated
+STN-ENV-0169,Beijing,99.67,158.3,42.98,15.86,1.121,Uncalculated
+STN-ENV-0170,Paris,9.03,18.08,-1.11,-0.26,0.124,Uncalculated
+STN-ENV-0171,London,6.5,10.06,2.86,1.61,0.037,Uncalculated
+STN-ENV-0172,Beijing,59.95,95.15,26.93,7.22,0.695,Uncalculated
+STN-ENV-0173,Delhi,145.22,220.21,62.47,24.43,1.818,Uncalculated
+STN-ENV-0174,Tokyo,24.89,43.94,13.96,2.22,0.261,Uncalculated
+STN-ENV-0175,Berlin,13.65,18.59,5.99,0.85,0.243,Uncalculated
+STN-ENV-0176,Beijing,66.86,104.98,27.66,7.82,0.607,Uncalculated
+STN-ENV-0177,New York,22.49,30.63,11.87,3.5,0.127,Uncalculated
+STN-ENV-0178,London,17.54,20.36,9.73,2.7,-0.021,Uncalculated
+STN-ENV-0179,Berlin,16.39,33.59,5.23,4.73,0.08,Uncalculated
+STN-ENV-0180,Beijing,76.04,125.65,37.92,12.57,1.098,Uncalculated
+STN-ENV-0181,Delhi,186.02,301.69,90.44,26.72,2.23,Uncalculated
+STN-ENV-0182,Sydney,15.35,23.47,3.64,3.61,0.112,Uncalculated
+STN-ENV-0183,Delhi,140.82,216.62,62.82,19.26,1.768,Uncalculated
+STN-ENV-0184,London,28.27,55.75,13.73,3.16,0.432,Uncalculated
+STN-ENV-0185,New York,24.8,41.79,18.0,3.9,0.176,Uncalculated
+STN-ENV-0186,Beijing,109.52,175.92,47.08,14.73,1.564,Uncalculated
+STN-ENV-0187,Sydney,9.42,13.27,1.42,3.01,0.141,Uncalculated
+STN-ENV-0188,Beijing,71.11,103.55,29.16,14.09,0.894,Uncalculated
+STN-ENV-0189,Paris,20.01,37.73,12.67,2.56,0.29,Uncalculated
+STN-ENV-0190,Tokyo,17.61,22.89,5.8,1.66,0.261,Uncalculated
+STN-ENV-0191,Delhi,142.1,230.09,61.39,21.12,1.643,Uncalculated
+STN-ENV-0192,Beijing,91.89,150.88,42.04,12.95,1.314,Uncalculated
+STN-ENV-0193,Beijing,126.93,204.76,58.04,19.43,1.495,Uncalculated
+STN-ENV-0194,Berlin,22.43,38.23,13.3,1.38,0.365,Uncalculated
+STN-ENV-0195,Berlin,16.55,33.22,7.73,2.96,0.151,Uncalculated
+STN-ENV-0196,Beijing,84.93,131.93,38.97,15.61,0.954,Uncalculated
+STN-ENV-0197,New York,30.28,49.27,13.31,1.54,0.554,Uncalculated
+STN-ENV-0198,Tokyo,21.52,33.3,5.77,1.47,0.247,Uncalculated
+STN-ENV-0199,Beijing,116.7,177.52,51.92,16.84,1.397,Uncalculated
+STN-ENV-0200,London,17.59,29.57,8.1,3.45,0.239,Uncalculated
+STN-ENV-0201,Delhi,115.09,190.4,50.46,18.6,1.641,Uncalculated
+STN-ENV-0202,Paris,19.82,38.59,4.22,4.19,0.455,Uncalculated
+STN-ENV-0203,Berlin,17.09,36.63,4.29,0.03,0.333,Uncalculated
+STN-ENV-0204,London,14.68,14.63,6.49,1.19,0.462,Uncalculated
+STN-ENV-0205,Delhi,150.33,248.67,70.45,21.2,1.71,Uncalculated
+STN-ENV-0206,Sydney,12.94,21.62,10.87,1.84,0.221,Uncalculated
+STN-ENV-0207,Berlin,25.36,48.58,10.86,3.83,0.312,Uncalculated
+STN-ENV-0208,New York,12.32,17.74,3.39,-0.21,-0.029,Uncalculated
+STN-ENV-0209,Berlin,14.52,20.57,5.41,1.52,,Uncalculated
+STN-ENV-0210,Tokyo,21.63,28.52,6.59,4.11,0.21,Uncalculated
+STN-ENV-0211,Tokyo,18.83,34.0,10.83,280.0,0.379,Uncalculated
+STN-ENV-0212,Delhi,141.57,229.08,70.12,20.93,1.659,Uncalculated
+STN-ENV-0213,London,26.32,36.53,9.77,6.49,0.271,Uncalculated
+STN-ENV-0214,Paris,17.94,17.88,4.5,5.68,0.369,Uncalculated
+STN-ENV-0215,New York,17.99,30.86,11.12,-0.54,0.209,Uncalculated
+STN-ENV-0216,Delhi,110.37,179.24,50.62,16.73,1.441,Uncalculated
+STN-ENV-0217,Sydney,5.96,4.6,3.69,5.27,0.114,Uncalculated
+STN-ENV-0218,New York,22.73,30.43,14.99,4.13,0.317,Uncalculated
+STN-ENV-0219,Tokyo,15.65,28.31,2.94,2.37,0.163,Uncalculated
+STN-ENV-0220,Beijing,69.43,120.36,27.06,12.38,0.883,Uncalculated
+STN-ENV-0221,Beijing,65.59,102.47,29.03,10.17,0.774,Uncalculated
+STN-ENV-0222,Paris,23.89,33.83,10.94,4.65,,Uncalculated
+STN-ENV-0223,New York,17.61,29.67,6.86,2.33,0.201,Uncalculated
+STN-ENV-0224,Delhi,147.75,239.58,73.87,22.47,1.902,Uncalculated
+STN-ENV-0225,Paris,26.76,40.99,11.11,4.65,0.375,Uncalculated
+STN-ENV-0226,Berlin,17.6,38.29,6.27,3.94,0.288,Uncalculated
+STN-ENV-0227,Berlin,17.28,32.15,8.15,1.94,0.207,Uncalculated
+STN-ENV-0228,Sydney,12.56,18.18,8.56,1.2,-0.043,Uncalculated
+STN-ENV-0229,London,19.86,23.81,6.76,0.09,,Uncalculated
+STN-ENV-0230,Beijing,113.27,187.82,50.53,16.41,1.33,Uncalculated
+STN-ENV-0231,Delhi,151.14,247.78,71.01,24.1,1.7,Uncalculated
+STN-ENV-0232,New York,28.03,43.33,15.78,4.9,0.284,Uncalculated
+STN-ENV-0233,Paris,27.66,46.01,13.1,2.65,0.276,Uncalculated
+STN-ENV-0234,Delhi,93.86,149.42,49.49,11.22,1.073,Uncalculated
+STN-ENV-0235,Paris,20.65,35.64,15.23,2.88,0.392,Uncalculated
+STN-ENV-0236,Paris,23.71,32.81,6.45,4.94,0.279,Uncalculated
+STN-ENV-0237,Paris,29.21,40.9,8.07,3.66,,Uncalculated
+STN-ENV-0238,New York,32.6,56.22,17.06,2.72,0.408,Uncalculated
+STN-ENV-0239,Delhi,123.05,201.58,59.47,17.57,1.618,Uncalculated
+STN-ENV-0240,Tokyo,18.25,26.74,7.54,3.23,0.321,Uncalculated
+STN-ENV-0241,Tokyo,21.6,30.81,8.21,5.1,0.2,Uncalculated
+STN-ENV-0242,New York,21.68,40.43,7.3,2.87,0.456,Uncalculated
+STN-ENV-0243,Berlin,26.81,39.32,8.56,5.6,0.276,Uncalculated
+STN-ENV-0244,New York,14.59,23.62,9.97,3.6,0.195,Uncalculated
+STN-ENV-0245,Beijing,99.41,158.7,43.59,13.15,1.231,Uncalculated
+STN-ENV-0246,Paris,28.01,37.48,13.51,6.08,0.385,Uncalculated
+STN-ENV-0247,Delhi,180.32,289.47,75.67,27.49,2.243,Uncalculated
+STN-ENV-0248,Delhi,142.17,227.95,66.98,19.52,1.63,Uncalculated
+STN-ENV-0249,London,24.46,40.93,12.77,6.31,0.365,Uncalculated
+STN-ENV-0250,London,18.75,30.8,4.41,2.62,,Uncalculated
+STN-ENV-0251,Sydney,9.6,26.03,5.1,-1.48,0.115,Uncalculated
+STN-ENV-0252,Tokyo,13.74,27.79,6.2,1.0,0.146,Uncalculated
+STN-ENV-0253,London,12.79,20.66,4.41,0.49,0.073,Uncalculated
+STN-ENV-0254,London,17.79,29.12,-0.7,1.65,0.262,Uncalculated
+STN-ENV-0255,Tokyo,19.4,39.86,6.75,2.24,0.167,Uncalculated
+STN-ENV-0256,Beijing,80.58,133.24,37.17,11.7,0.991,Uncalculated
+STN-ENV-0257,Berlin,19.94,25.76,7.33,2.55,0.229,Uncalculated
+STN-ENV-0258,Tokyo,23.56,42.44,9.94,3.39,0.149,Uncalculated
+STN-ENV-0259,Berlin,16.54,32.68,11.93,3.36,0.105,Uncalculated
+STN-ENV-0260,Sydney,19.02,38.52,8.33,1.73,0.269,Uncalculated
+STN-ENV-0261,London,23.78,36.03,4.41,5.34,0.233,Uncalculated
+STN-ENV-0262,Delhi,133.11,210.6,59.34,18.13,1.541,Uncalculated
+STN-ENV-0263,London,18.9,25.53,8.8,3.76,0.15,Uncalculated
+STN-ENV-0264,Paris,17.95,30.26,5.6,5.16,0.142,Uncalculated
+STN-ENV-0265,Sydney,11.92,22.74,7.57,1.52,0.307,Uncalculated
+STN-ENV-0266,Berlin,8.73,11.41,-0.46,1.6,-0.007,Uncalculated
+STN-ENV-0267,Berlin,24.96,39.23,10.82,2.29,0.447,Uncalculated
+STN-ENV-0268,Paris,7.1,1.09,-1.23,0.3,0.052,Uncalculated
+STN-ENV-0269,Paris,24.25,46.35,10.03,5.99,0.226,Uncalculated
+STN-ENV-0270,Beijing,60.69,89.28,29.43,10.23,0.767,Uncalculated
+STN-ENV-0271,New York,18.14,30.9,7.68,3.35,0.223,Uncalculated
+STN-ENV-0272,Paris,20.57,34.1,8.6,0.18,0.227,Uncalculated
+STN-ENV-0273,Berlin,28.15,45.26,12.75,3.15,0.36,Uncalculated
+STN-ENV-0274,Delhi,101.39,162.56,45.86,17.82,1.22,Uncalculated
+STN-ENV-0275,Berlin,23.34,32.29,12.59,4.12,0.259,Uncalculated
+STN-ENV-0276,Berlin,24.51,37.58,13.13,4.48,0.388,Uncalculated
+STN-ENV-0277,Beijing,35.31,61.34,20.15,5.55,0.279,Uncalculated
+STN-ENV-0278,New York,18.62,36.11,8.88,1.87,0.132,Uncalculated
+STN-ENV-0279,New York,30.16,46.16,8.59,5.02,0.283,Uncalculated
+STN-ENV-0280,Paris,16.11,17.98,9.82,0.12,0.088,Uncalculated
+STN-ENV-0281,Sydney,15.59,21.06,11.07,-0.07,0.196,Uncalculated
+STN-ENV-0282,London,19.91,41.12,16.34,1.88,0.289,Uncalculated
+STN-ENV-0283,Berlin,18.71,26.34,12.77,3.09,0.028,Uncalculated
+STN-ENV-0284,Tokyo,18.31,28.81,6.77,0.39,0.172,Uncalculated
+STN-ENV-0285,London,21.71,41.82,10.33,3.45,0.228,Uncalculated
+STN-ENV-0286,London,15.22,21.72,6.04,0.79,0.154,Uncalculated
+STN-ENV-0287,New York,20.57,32.08,8.04,1.8,,Uncalculated
+STN-ENV-0288,New York,24.04,42.43,10.48,5.56,0.257,Uncalculated
+STN-ENV-0289,Beijing,88.76,150.57,43.8,13.37,0.974,Uncalculated
+STN-ENV-0290,Beijing,92.42,144.65,36.82,12.51,1.076,Uncalculated
+STN-ENV-0291,New York,18.05,35.84,5.11,2.99,0.045,Uncalculated
+STN-ENV-0292,Delhi,162.13,258.0,76.62,22.12,1.913,Uncalculated
+STN-ENV-0293,Delhi,144.43,226.65,69.35,22.24,1.661,Uncalculated
+STN-ENV-0294,Tokyo,10.89,18.67,2.92,3.29,0.104,Uncalculated
+STN-ENV-0295,New York,19.08,24.74,13.54,3.85,,Uncalculated
+STN-ENV-0296,Paris,18.63,32.16,11.31,6.03,0.219,Uncalculated
+STN-ENV-0297,Beijing,65.7,120.86,28.76,6.95,0.868,Uncalculated
+STN-ENV-0298,New York,19.38,36.53,1.41,3.1,0.196,Uncalculated
+STN-ENV-0299,Delhi,161.47,257.83,67.66,22.21,2.0,Uncalculated
+STN-ENV-0300,New York,18.55,34.95,6.37,2.52,0.335,Uncalculated
+STN-ENV-0301,Delhi,147.88,231.95,68.82,22.18,1.802,Uncalculated
+STN-ENV-0302,New York,22.34,31.92,12.34,6.77,0.266,Uncalculated
+STN-ENV-0303,Berlin,15.3,24.09,5.49,2.21,0.225,Uncalculated
+STN-ENV-0304,Paris,21.93,35.53,9.18,3.17,0.294,Uncalculated
+STN-ENV-0305,Sydney,14.59,16.88,6.47,3.7,0.275,Uncalculated
+STN-ENV-0306,Tokyo,18.67,28.35,7.75,2.72,,Uncalculated
+STN-ENV-0307,Berlin,21.61,33.85,10.21,5.99,0.34,Uncalculated
+STN-ENV-0308,Paris,31.63,58.33,14.15,5.75,0.384,Uncalculated
+STN-ENV-0309,Delhi,155.22,241.89,64.83,24.53,1.897,Uncalculated
+STN-ENV-0310,Beijing,44.19,63.77,19.26,3.83,0.562,Uncalculated
+STN-ENV-0311,Beijing,90.75,146.08,40.77,16.59,0.968,Uncalculated
+STN-ENV-0312,London,16.91,32.81,10.58,1.55,0.31,Uncalculated
+STN-ENV-0313,Paris,34.86,58.54,13.19,5.21,,Uncalculated
+STN-ENV-0314,New York,24.2,40.23,11.5,2.65,0.362,Uncalculated
+STN-ENV-0315,Tokyo,15.31,23.06,8.58,0.76,0.21,Uncalculated
+STN-ENV-0316,New York,25.12,43.57,10.86,1.96,0.273,Uncalculated
+STN-ENV-0317,New York,22.5,40.13,4.86,3.53,0.309,Uncalculated
+STN-ENV-0318,Paris,13.69,20.62,9.19,-0.9,0.206,Uncalculated
+STN-ENV-0319,Sydney,14.59,18.6,8.81,1.82,0.044,Uncalculated
+STN-ENV-0320,Tokyo,16.18,21.17,7.97,4.01,0.336,Uncalculated
+STN-ENV-0321,London,27.1,47.76,12.32,5.01,0.332,Uncalculated
+STN-ENV-0322,Berlin,18.41,21.73,2.94,3.41,0.452,Uncalculated
+STN-ENV-0323,New York,29.92,56.25,15.79,3.14,0.438,Uncalculated
+STN-ENV-0324,Tokyo,19.91,29.58,13.42,0.61,0.244,Uncalculated
+STN-ENV-0325,London,24.87,41.34,7.85,5.29,0.229,Uncalculated
+STN-ENV-0326,Berlin,16.66,30.17,11.53,1.83,0.189,Uncalculated
+STN-ENV-0327,New York,23.94,34.89,14.17,3.47,0.302,Uncalculated
+STN-ENV-0328,Tokyo,10.23,14.07,1.17,1.24,0.269,Uncalculated
+STN-ENV-0329,Berlin,18.4,30.09,7.1,3.77,0.343,Uncalculated
+STN-ENV-0330,Paris,15.09,19.88,2.61,5.03,0.226,Uncalculated
+STN-ENV-0331,Sydney,8.57,8.38,3.66,3.48,0.28,Uncalculated
+STN-ENV-0332,Beijing,66.07,100.82,31.08,6.41,0.591,Uncalculated
+STN-ENV-0333,Beijing,99.03,164.5,40.6,14.39,1.235,Uncalculated
+STN-ENV-0334,New York,21.19,35.89,10.69,1.16,0.38,Uncalculated
+STN-ENV-0335,New York,22.17,31.51,11.9,4.73,0.321,Uncalculated
+STN-ENV-0336,Berlin,18.17,33.44,10.14,2.73,0.085,Uncalculated
+STN-ENV-0337,Tokyo,22.86,32.89,11.65,4.34,0.413,Uncalculated
+STN-ENV-0338,Beijing,85.09,126.39,34.6,12.17,1.097,Uncalculated
+STN-ENV-0339,New York,23.37,40.87,10.15,1.95,0.315,Uncalculated
+STN-ENV-0340,London,17.15,35.67,8.77,1.27,0.215,Uncalculated
+STN-ENV-0341,New York,28.32,48.11,17.13,1.95,0.539,Uncalculated
+STN-ENV-0342,Beijing,111.02,168.19,49.97,14.76,1.377,Uncalculated
+STN-ENV-0343,Delhi,138.71,221.82,63.7,18.59,1.64,Uncalculated
+STN-ENV-0344,Sydney,10.25,15.02,1.82,-0.02,0.042,Uncalculated
+STN-ENV-0345,Beijing,50.66,82.95,19.33,5.96,0.684,Uncalculated
+STN-ENV-0346,London,15.66,20.81,3.2,2.94,0.287,Uncalculated
+STN-ENV-0347,Tokyo,8.25,11.53,2.45,1.77,0.105,Uncalculated
+STN-ENV-0348,London,15.45,17.61,13.14,2.91,0.13,Uncalculated
+STN-ENV-0349,Delhi,152.49,245.1,67.42,24.64,1.963,Uncalculated
+STN-ENV-0350,Delhi,138.24,214.26,63.3,20.62,1.57,Uncalculated
+STN-ENV-0351,New York,34.78,57.83,17.32,4.05,0.614,Uncalculated
+STN-ENV-0352,New York,19.96,28.18,5.71,6.31,0.166,Uncalculated
+STN-ENV-0353,Beijing,75.46,105.02,32.65,12.68,0.778,Uncalculated
+STN-ENV-0354,Paris,30.38,52.57,15.54,4.78,0.249,Uncalculated
+STN-ENV-0355,Sydney,6.22,12.42,4.08,1.06,-0.036,Uncalculated
+STN-ENV-0356,London,12.59,26.91,-0.32,2.32,0.127,Uncalculated
+STN-ENV-0357,Beijing,99.11,148.12,46.38,14.56,1.142,Uncalculated
+STN-ENV-0358,Paris,22.83,33.25,8.62,3.62,0.376,Uncalculated
+STN-ENV-0359,Beijing,81.33,130.79,35.03,12.95,1.064,Uncalculated
+STN-ENV-0360,Sydney,9.19,17.56,5.35,0.29,0.088,Uncalculated
+STN-ENV-0361,Sydney,12.72,13.04,10.29,-0.54,0.463,Uncalculated
+STN-ENV-0362,Delhi,111.72,180.91,49.67,13.64,1.317,Uncalculated
+STN-ENV-0363,New York,22.4,32.98,13.62,4.69,0.258,Uncalculated
+STN-ENV-0364,New York,15.63,15.73,2.71,-0.03,0.06,Uncalculated
+STN-ENV-0365,Sydney,11.45,14.57,5.55,2.42,0.129,Uncalculated
+STN-ENV-0366,Beijing,128.03,207.42,55.99,17.47,1.566,Uncalculated
+STN-ENV-0367,Sydney,10.73,8.09,5.67,-0.1,0.01,Uncalculated
+STN-ENV-0368,New York,21.28,37.23,8.68,2.11,0.205,Uncalculated
+STN-ENV-0369,Tokyo,17.09,28.76,3.67,2.85,0.238,Uncalculated
+STN-ENV-0370,Beijing,88.71,140.66,37.26,11.37,1.012,Uncalculated
+STN-ENV-0371,Delhi,156.39,242.04,65.44,22.53,1.803,Uncalculated
+STN-ENV-0372,Berlin,20.22,24.58,5.18,2.99,0.321,Uncalculated
+STN-ENV-0373,Beijing,90.94,143.5,42.36,11.82,0.963,Uncalculated
+STN-ENV-0374,Beijing,81.16,124.23,35.77,14.32,,Uncalculated
+STN-ENV-0375,New York,22.55,34.41,10.84,0.8,0.288,Uncalculated
+STN-ENV-0376,Delhi,132.51,216.55,65.08,19.55,1.675,Uncalculated
+STN-ENV-0377,Beijing,46.49,73.01,20.03,8.88,0.588,Uncalculated
+STN-ENV-0378,New York,36.47,56.85,18.31,3.48,0.415,Uncalculated
+STN-ENV-0379,Sydney,14.18,21.2,6.47,1.96,0.14,Uncalculated
+STN-ENV-0380,London,15.1,29.23,15.08,2.46,0.282,Uncalculated
+STN-ENV-0381,Delhi,148.05,243.35,57.57,21.0,1.863,Uncalculated
+STN-ENV-0382,Paris,15.92,27.59,5.01,2.27,0.196,Uncalculated
+STN-ENV-0383,Tokyo,15.78,25.92,9.06,3.21,0.162,Uncalculated
+STN-ENV-0384,Paris,15.11,25.32,4.54,1.57,0.185,Uncalculated
+STN-ENV-0385,Berlin,18.76,37.15,10.14,3.96,0.152,Uncalculated
+STN-ENV-0386,Sydney,7.26,13.99,3.08,1.68,,Uncalculated
+STN-ENV-0387,Delhi,153.59,253.36,71.71,22.16,1.794,Uncalculated
+STN-ENV-0388,Beijing,99.5,157.1,41.38,16.62,,Uncalculated
+STN-ENV-0389,New York,17.45,21.24,8.37,1.51,0.164,Uncalculated
+STN-ENV-0390,Berlin,19.76,28.28,10.29,4.25,0.29,Uncalculated
+STN-ENV-0391,Delhi,109.2,171.91,49.54,15.3,1.392,Uncalculated
+STN-ENV-0392,Tokyo,20.3,40.51,9.58,2.57,0.206,Uncalculated
+STN-ENV-0393,Delhi,115.9,189.12,55.76,17.14,1.31,Uncalculated
+STN-ENV-0394,Berlin,22.75,33.21,5.2,3.92,0.344,Uncalculated
+STN-ENV-0395,New York,12.04,23.3,5.79,-1.81,0.163,Uncalculated
+STN-ENV-0396,Paris,17.97,28.1,4.46,3.38,0.179,Uncalculated
+STN-ENV-0397,London,14.46,31.3,8.78,2.01,0.311,Uncalculated
+STN-ENV-0398,Paris,25.22,38.68,8.84,4.21,0.246,Uncalculated
+STN-ENV-0399,New York,25.05,32.39,3.86,4.51,0.101,Uncalculated
+STN-ENV-0400,Berlin,20.33,31.6,11.49,3.64,0.173,Uncalculated
+STN-ENV-0401,New York,19.2,29.06,7.84,-0.13,0.392,Uncalculated
+STN-ENV-0402,Sydney,3.61,-0.93,2.7,-1.05,0.012,Uncalculated
+STN-ENV-0403,Tokyo,18.17,32.01,12.46,3.23,0.167,Uncalculated
+STN-ENV-0404,Delhi,167.58,275.25,76.53,25.44,2.014,Uncalculated
+STN-ENV-0405,Sydney,20.04,26.45,9.53,1.82,0.342,Uncalculated
+STN-ENV-0406,Delhi,125.15,205.1,56.17,19.88,1.493,Uncalculated
+STN-ENV-0407,Paris,20.01,28.98,5.56,2.62,0.299,Uncalculated
+STN-ENV-0408,Berlin,20.52,32.71,8.59,4.41,0.227,Uncalculated
+STN-ENV-0409,London,18.72,29.3,14.35,4.62,0.285,Uncalculated
+STN-ENV-0410,London,26.38,42.08,10.74,4.37,0.335,Uncalculated
+STN-ENV-0411,Tokyo,14.36,25.35,6.0,2.99,0.133,Uncalculated
+STN-ENV-0412,New York,20.63,27.89,13.06,2.18,0.273,Uncalculated
+STN-ENV-0413,Tokyo,21.94,41.58,5.25,4.63,0.209,Uncalculated
+STN-ENV-0414,Delhi,150.79,243.79,69.72,22.95,1.672,Uncalculated
+STN-ENV-0415,Beijing,109.68,179.66,44.59,16.01,1.314,Uncalculated
+STN-ENV-0416,Beijing,75.72,117.26,35.27,9.53,0.78,Uncalculated
+STN-ENV-0417,Beijing,111.84,173.38,50.26,16.05,1.402,Uncalculated
+STN-ENV-0418,New York,12.85,26.47,7.62,0.26,0.15,Uncalculated
+STN-ENV-0419,Tokyo,10.69,11.32,1.77,2.75,0.271,Uncalculated
+STN-ENV-0420,Sydney,15.84,26.09,5.52,4.21,0.157,Uncalculated
+STN-ENV-0421,Berlin,19.03,35.55,10.56,4.23,0.226,Uncalculated
+STN-ENV-0422,Paris,29.52,46.61,11.76,8.16,0.207,Uncalculated
+STN-ENV-0423,Delhi,143.48,235.42,66.83,20.83,1.611,Uncalculated
+STN-ENV-0424,Beijing,84.85,134.4,38.81,13.62,0.85,Uncalculated
+STN-ENV-0425,Berlin,12.69,13.92,4.37,0.13,0.26,Uncalculated
+STN-ENV-0426,London,19.87,33.66,7.99,2.68,0.192,Uncalculated
+STN-ENV-0427,Sydney,16.08,26.73,7.25,0.2,0.326,Uncalculated
+STN-ENV-0428,Tokyo,18.26,42.65,7.55,3.59,-0.049,Uncalculated
+STN-ENV-0429,Delhi,163.87,257.47,75.93,24.05,2.121,Uncalculated
+STN-ENV-0430,Delhi,162.9,259.39,72.19,21.35,1.948,Uncalculated
+STN-ENV-0431,London,14.94,20.24,5.0,1.21,,Uncalculated
+STN-ENV-0432,Sydney,14.57,22.6,9.29,4.88,0.069,Uncalculated
+STN-ENV-0433,London,18.43,28.58,7.03,3.38,0.274,Uncalculated
+STN-ENV-0434,London,18.7,25.56,6.79,3.96,0.187,Uncalculated
+STN-ENV-0435,Beijing,129.58,209.66,50.85,19.62,1.436,Uncalculated
+STN-ENV-0436,Sydney,13.79,21.0,3.09,1.8,0.045,Uncalculated
+STN-ENV-0437,Beijing,71.43,121.02,29.63,10.74,0.735,Uncalculated
+STN-ENV-0438,Tokyo,18.29,26.02,6.61,3.11,0.258,Uncalculated
+STN-ENV-0439,London,20.18,41.6,6.92,1.38,0.179,Uncalculated
+STN-ENV-0440,Paris,34.12,55.97,18.3,6.26,0.245,Uncalculated
+STN-ENV-0441,Delhi,141.38,232.57,61.3,22.89,,Uncalculated
+STN-ENV-0442,Sydney,18.62,30.38,6.28,2.5,0.006,Uncalculated
+STN-ENV-0443,London,13.52,17.72,6.55,1.24,0.295,Uncalculated
+STN-ENV-0444,Sydney,11.9,17.73,2.05,0.67,0.341,Uncalculated
+STN-ENV-0445,Delhi,113.3,174.35,55.68,19.63,1.228,Uncalculated
+STN-ENV-0446,New York,19.28,30.29,11.08,2.21,0.337,Uncalculated
+STN-ENV-0447,Berlin,16.75,27.66,4.03,3.49,0.236,Uncalculated
+STN-ENV-0448,New York,18.09,29.17,11.18,2.43,0.167,Uncalculated
+STN-ENV-0449,London,28.65,52.49,16.56,3.93,0.298,Uncalculated
+STN-ENV-0450,Delhi,189.79,302.92,81.98,27.32,2.343,Uncalculated
+STN-ENV-0451,Berlin,20.91,23.99,5.92,1.68,0.247,Uncalculated
+STN-ENV-0452,New York,19.39,48.75,6.89,4.02,-0.027,Uncalculated
+STN-ENV-0453,London,16.58,23.08,3.22,1.0,0.406,Uncalculated
+STN-ENV-0454,Delhi,165.96,270.39,72.34,25.59,2.035,Uncalculated
+STN-ENV-0455,London,21.5,26.88,8.47,3.36,0.253,Uncalculated
+STN-ENV-0456,Beijing,81.92,132.3,38.38,13.42,0.911,Uncalculated
+STN-ENV-0457,Delhi,158.94,250.33,71.77,22.93,1.888,Uncalculated
+STN-ENV-0458,New York,26.9,28.93,11.66,5.66,0.45,Uncalculated
+STN-ENV-0459,London,19.23,29.35,7.2,2.67,,Uncalculated
+STN-ENV-0460,Sydney,9.64,15.17,0.41,5.33,0.153,Uncalculated
+STN-ENV-0461,New York,14.73,22.48,8.41,-0.21,0.052,Uncalculated
+STN-ENV-0462,London,21.25,35.22,11.27,6.83,0.22,Uncalculated
+STN-ENV-0463,Sydney,18.5,28.26,6.48,2.59,0.227,Uncalculated
+STN-ENV-0464,Sydney,8.67,14.21,0.6,1.63,0.174,Uncalculated
+STN-ENV-0465,Tokyo,22.95,37.57,14.99,2.54,0.234,Uncalculated
+STN-ENV-0466,Sydney,9.97,15.78,5.23,-0.86,0.212,Uncalculated
+STN-ENV-0467,New York,19.39,30.17,9.92,2.12,0.118,Uncalculated
+STN-ENV-0468,New York,27.03,38.78,13.48,3.51,0.331,Uncalculated
+STN-ENV-0469,Paris,22.47,38.92,6.5,3.64,0.26,Uncalculated
+STN-ENV-0470,Berlin,20.18,30.87,13.58,4.71,0.091,Uncalculated
+STN-ENV-0471,Beijing,89.87,141.97,39.23,13.77,1.074,Uncalculated
+STN-ENV-0472,New York,18.29,31.83,10.7,3.06,0.161,Uncalculated
+STN-ENV-0473,Delhi,171.33,275.19,81.47,26.28,,Uncalculated
+STN-ENV-0474,Berlin,18.71,26.44,8.66,0.17,0.183,Uncalculated
+STN-ENV-0475,Sydney,7.83,18.79,-0.02,-1.32,0.129,Uncalculated
+STN-ENV-0476,London,15.54,18.91,-0.49,0.09,0.063,Uncalculated
+STN-ENV-0477,Tokyo,3.98,1.2,1.67,0.04,0.071,Uncalculated
+STN-ENV-0478,Delhi,141.82,230.25,64.57,18.47,1.66,Uncalculated
+STN-ENV-0479,Berlin,25.19,49.07,9.6,2.74,0.225,Uncalculated
+STN-ENV-0480,Delhi,103.35,162.47,46.91,13.45,1.524,Uncalculated
+STN-ENV-0481,Delhi,160.49,258.85,73.51,24.81,1.891,Uncalculated
+STN-ENV-0482,Delhi,155.07,242.15,72.76,23.92,1.84,Uncalculated
+STN-ENV-0483,Berlin,15.43,20.04,6.26,1.86,0.275,Uncalculated
+STN-ENV-0484,Tokyo,24.91,45.52,11.08,0.89,0.222,Uncalculated
+STN-ENV-0485,Sydney,11.18,19.72,4.5,1.32,,Uncalculated
+STN-ENV-0486,Paris,36.06,63.51,16.33,5.9,0.484,Uncalculated
+STN-ENV-0487,Beijing,50.24,85.82,21.07,8.75,0.627,Uncalculated
+STN-ENV-0488,Sydney,11.19,7.46,3.48,4.31,0.364,Uncalculated
+STN-ENV-0489,New York,21.17,27.9,8.16,4.85,0.174,Uncalculated
+STN-ENV-0490,Berlin,18.81,31.46,8.93,3.07,0.379,Uncalculated
+STN-ENV-0491,Delhi,165.07,255.63,71.74,24.33,2.028,Uncalculated
+STN-ENV-0492,Sydney,22.19,30.24,8.63,2.21,0.357,Uncalculated
+STN-ENV-0493,New York,24.5,46.34,16.45,5.71,0.328,Uncalculated
+STN-ENV-0494,Berlin,19.12,27.88,11.29,3.12,0.417,Uncalculated
+STN-ENV-0495,New York,15.97,29.1,4.32,3.34,0.16,Uncalculated
+STN-ENV-0496,Delhi,73.85,118.01,35.82,10.19,0.936,Uncalculated
+STN-ENV-0497,Paris,31.02,46.23,15.84,2.79,0.503,Uncalculated
+STN-ENV-0498,Berlin,16.4,17.92,7.07,1.86,0.141,Uncalculated
+STN-ENV-0499,New York,36.32,59.28,14.22,4.99,0.536,Uncalculated
+STN-ENV-0500,London,24.34,46.22,8.49,3.94,0.29,Uncalculated
+STN-ENV-0501,New York,23.88,34.95,11.42,2.48,0.163,Uncalculated
+STN-ENV-0502,Beijing,93.38,149.74,39.48,14.04,,Uncalculated
+STN-ENV-0503,Delhi,154.14,239.02,72.65,24.89,1.841,Uncalculated
+STN-ENV-0504,Tokyo,14.87,20.44,10.84,-0.28,0.278,Uncalculated
+STN-ENV-0505,New York,12.37,21.49,5.44,-1.32,-0.059,Uncalculated
+STN-ENV-0506,Paris,20.7,36.83,12.73,4.97,0.268,Uncalculated
+STN-ENV-0507,London,19.91,34.63,7.72,0.79,0.328,Uncalculated
+STN-ENV-0508,London,16.76,16.66,5.4,1.94,0.073,Uncalculated
+STN-ENV-0509,Tokyo,12.21,17.26,8.8,2.74,0.083,Uncalculated
+STN-ENV-0510,Sydney,9.76,10.77,9.13,1.37,0.174,Uncalculated
+STN-ENV-0511,Beijing,107.01,169.67,54.04,15.94,1.369,Uncalculated
+STN-ENV-0512,Tokyo,21.37,33.63,10.61,3.31,0.417,Uncalculated
+STN-ENV-0513,Beijing,88.64,147.16,42.48,17.07,1.005,Uncalculated
+STN-ENV-0514,New York,25.23,41.84,12.28,6.46,0.221,Uncalculated
+STN-ENV-0515,Delhi,100.38,167.7,49.38,14.02,,Uncalculated
+STN-ENV-0516,Paris,19.23,27.27,9.95,4.46,0.155,Uncalculated
+STN-ENV-0517,London,21.56,27.4,12.12,3.99,0.309,Uncalculated
+STN-ENV-0518,Tokyo,13.48,28.84,2.66,1.99,0.38,Uncalculated
+STN-ENV-0519,Paris,24.65,41.61,10.4,2.34,0.371,Uncalculated
+STN-ENV-0520,Beijing,58.17,89.36,28.62,9.4,0.776,Uncalculated
+STN-ENV-0521,Delhi,82.26,133.81,39.19,11.88,1.115,Uncalculated
+STN-ENV-0522,London,23.68,42.06,13.35,2.98,0.337,Uncalculated
+STN-ENV-0523,London,25.14,40.81,11.67,2.62,0.38,Uncalculated
+STN-ENV-0524,Beijing,71.6,110.91,30.26,12.24,0.825,Uncalculated
+STN-ENV-0525,Delhi,86.78,136.65,38.88,11.87,1.157,Uncalculated
+STN-ENV-0526,London,8.96,15.79,4.17,0.2,0.149,Uncalculated
+STN-ENV-0527,Delhi,204.47,328.15,92.74,31.84,2.306,Uncalculated
+STN-ENV-0528,London,20.56,38.95,6.35,2.87,0.271,Uncalculated
+STN-ENV-0529,New York,18.66,28.47,7.6,2.62,0.007,Uncalculated
+STN-ENV-0530,Beijing,77.27,118.81,34.5,13.14,0.999,Uncalculated
+STN-ENV-0531,Delhi,73.03,129.74,26.14,12.93,0.853,Uncalculated
+STN-ENV-0532,Paris,27.72,45.22,14.97,0.97,0.523,Uncalculated
+STN-ENV-0533,Sydney,18.0,32.97,8.59,2.51,0.265,Uncalculated
+STN-ENV-0534,New York,17.69,30.92,8.76,0.54,0.305,Uncalculated
+STN-ENV-0535,Berlin,30.32,49.45,12.1,3.97,0.259,Uncalculated
+STN-ENV-0536,Paris,23.3,36.14,12.24,3.49,0.348,Uncalculated
+STN-ENV-0537,Beijing,120.42,178.65,51.69,17.53,1.381,Uncalculated
+STN-ENV-0538,London,21.54,29.14,7.67,1.69,0.367,Uncalculated
+STN-ENV-0539,Berlin,20.45,34.37,11.09,1.45,0.134,Uncalculated
+STN-ENV-0540,Paris,35.06,42.51,16.85,6.35,0.432,Uncalculated
+STN-ENV-0541,New York,26.3,42.45,8.0,6.25,0.2,Uncalculated
+STN-ENV-0542,Berlin,20.78,36.55,14.08,0.03,0.262,Uncalculated
+STN-ENV-0543,Berlin,9.78,19.81,2.12,0.98,0.32,Uncalculated
+STN-ENV-0544,Delhi,87.25,142.59,38.86,14.19,1.119,Uncalculated
+STN-ENV-0545,Tokyo,20.06,36.89,14.27,2.96,0.237,Uncalculated
+STN-ENV-0546,Paris,32.81,60.52,8.58,3.25,0.147,Uncalculated
+STN-ENV-0547,Tokyo,18.58,35.21,3.24,2.07,0.169,Uncalculated
+STN-ENV-0548,Beijing,72.43,116.88,33.92,11.32,0.917,Uncalculated
+STN-ENV-0549,Paris,12.96,20.07,-1.6,1.48,0.104,Uncalculated
+STN-ENV-0550,Paris,19.3,31.45,2.55,2.82,0.374,Uncalculated
+STN-ENV-0551,Delhi,144.58,229.96,68.59,21.66,1.742,Uncalculated
+STN-ENV-0552,London,15.72,30.74,5.85,1.57,0.296,Uncalculated
+STN-ENV-0553,New York,16.7,29.57,14.1,3.73,0.221,Uncalculated
+STN-ENV-0554,New York,21.72,32.84,6.67,2.54,0.233,Uncalculated
+STN-ENV-0555,New York,29.97,54.57,12.53,2.99,0.312,Uncalculated
+STN-ENV-0556,Sydney,14.05,21.03,7.95,5.45,0.067,Uncalculated
+STN-ENV-0557,Beijing,91.07,140.99,42.4,13.54,1.203,Uncalculated
+STN-ENV-0558,Berlin,19.9,31.78,8.19,-0.92,0.196,Uncalculated
+STN-ENV-0559,London,22.76,32.29,8.29,5.3,,Uncalculated
+STN-ENV-0560,Tokyo,17.5,32.69,8.57,4.5,0.157,Uncalculated
+STN-ENV-0561,New York,19.74,27.36,13.01,3.65,0.129,Uncalculated
+STN-ENV-0562,Sydney,14.21,22.17,8.68,3.08,0.226,Uncalculated
+STN-ENV-0563,Tokyo,16.99,31.88,5.75,5.79,0.129,Uncalculated
+STN-ENV-0564,London,14.06,18.93,3.35,0.66,,Uncalculated
+STN-ENV-0565,Beijing,115.67,187.13,49.97,17.55,1.263,Uncalculated
+STN-ENV-0566,London,10.65,12.17,0.97,4.55,0.078,Uncalculated
+STN-ENV-0567,Delhi,193.14,310.25,87.36,32.24,2.32,Uncalculated
+STN-ENV-0568,Berlin,21.41,37.09,12.07,2.66,0.228,Uncalculated
+STN-ENV-0569,New York,16.67,26.46,7.29,5.52,0.282,Uncalculated
+STN-ENV-0570,Beijing,85.52,136.99,43.64,14.03,1.041,Uncalculated
+STN-ENV-0571,Delhi,124.99,202.2,61.57,20.99,1.809,Uncalculated
+STN-ENV-0572,New York,26.44,40.91,12.82,5.12,0.36,Uncalculated
+STN-ENV-0573,London,23.94,42.75,12.88,4.05,0.114,Uncalculated
+STN-ENV-0574,London,22.31,42.55,7.34,6.66,0.246,Uncalculated
+STN-ENV-0575,Sydney,14.24,18.15,5.33,1.34,0.158,Uncalculated
+STN-ENV-0576,Paris,23.31,46.13,14.31,6.35,0.218,Uncalculated
+STN-ENV-0577,Paris,34.57,53.79,13.82,8.28,0.422,Uncalculated
+STN-ENV-0578,London,26.12,51.76,16.22,5.96,0.249,Uncalculated
+STN-ENV-0579,London,17.61,26.73,11.26,2.53,0.245,Uncalculated
+STN-ENV-0580,Tokyo,21.65,38.18,12.0,3.61,,Uncalculated
+STN-ENV-0581,Sydney,14.17,26.18,2.86,0.21,0.284,Uncalculated
+STN-ENV-0582,Berlin,17.77,26.49,7.06,1.99,0.055,Uncalculated
+STN-ENV-0583,Tokyo,16.48,26.73,9.35,3.4,0.171,Uncalculated
+STN-ENV-0584,Berlin,24.77,46.83,8.19,1.58,0.224,Uncalculated
+STN-ENV-0585,Delhi,139.49,221.57,62.2,20.48,1.704,Uncalculated
+STN-ENV-0586,Paris,25.56,38.81,13.76,6.75,0.288,Uncalculated
+STN-ENV-0587,Paris,32.41,46.08,12.88,4.63,0.414,Uncalculated
+STN-ENV-0588,Sydney,19.6,39.2,6.28,4.49,0.346,Uncalculated
+STN-ENV-0589,London,17.37,25.38,2.41,3.45,0.285,Uncalculated
+STN-ENV-0590,London,18.9,36.23,7.34,2.37,0.23,Uncalculated
+STN-ENV-0591,Delhi,142.59,225.14,66.49,21.16,1.757,Uncalculated
+STN-ENV-0592,Beijing,87.06,145.13,36.56,13.31,1.241,Uncalculated
+STN-ENV-0593,Beijing,93.0,152.83,41.9,10.87,1.196,Uncalculated
+STN-ENV-0594,Sydney,10.53,15.7,4.07,3.0,0.097,Uncalculated
+STN-ENV-0595,Beijing,58.09,89.28,24.14,8.54,,Uncalculated
+STN-ENV-0596,Paris,34.52,51.97,18.05,6.65,,Uncalculated
+STN-ENV-0597,Tokyo,20.75,29.88,14.27,3.7,0.153,Uncalculated
+STN-ENV-0598,Beijing,76.11,127.1,37.26,11.17,0.895,Uncalculated
+STN-ENV-0599,New York,24.4,39.85,8.89,3.96,0.146,Uncalculated
+STN-ENV-0600,Sydney,17.5,22.42,13.85,2.93,-0.019,Uncalculated
+STN-ENV-0601,Delhi,112.42,178.61,53.59,19.08,1.254,Uncalculated
+STN-ENV-0602,Beijing,89.49,142.52,38.9,13.52,1.086,Uncalculated
+STN-ENV-0603,New York,14.36,12.27,4.13,2.59,0.185,Uncalculated
+STN-ENV-0604,Beijing,82.49,130.99,40.48,10.48,0.849,Uncalculated
+STN-ENV-0605,Tokyo,20.77,36.86,9.87,3.05,0.011,Uncalculated
+STN-ENV-0606,Tokyo,12.98,20.09,3.29,4.13,0.303,Uncalculated
+STN-ENV-0607,Beijing,81.02,130.91,36.02,12.8,0.982,Uncalculated
+STN-ENV-0608,Sydney,14.4,25.46,5.26,0.54,0.328,Uncalculated
+STN-ENV-0609,Sydney,13.77,20.32,3.72,0.6,0.315,Uncalculated
+STN-ENV-0610,New York,15.63,28.67,10.08,1.23,0.261,Uncalculated
+STN-ENV-0611,Delhi,153.08,252.22,71.23,24.46,1.843,Uncalculated
+STN-ENV-0612,New York,25.07,32.5,13.8,5.08,0.261,Uncalculated
+STN-ENV-0613,Delhi,143.78,228.32,67.17,16.39,1.797,Uncalculated
+STN-ENV-0614,Beijing,108.15,184.69,45.92,16.1,1.282,Uncalculated
+STN-ENV-0615,Delhi,119.37,191.84,51.91,18.13,1.373,Uncalculated
+STN-ENV-0616,London,22.06,35.13,14.3,1.87,0.055,Uncalculated
+STN-ENV-0617,Paris,17.01,25.92,7.98,1.97,0.196,Uncalculated
+STN-ENV-0618,Berlin,11.4,24.61,0.72,3.71,0.246,Uncalculated
+STN-ENV-0619,Paris,28.69,41.2,13.56,4.92,0.47,Uncalculated
+STN-ENV-0620,Tokyo,18.09,33.58,10.11,1.96,0.222,Uncalculated
+STN-ENV-0621,London,17.68,26.91,9.53,2.37,0.123,Uncalculated
+STN-ENV-0622,Paris,17.61,24.43,5.11,2.3,0.302,Uncalculated
+STN-ENV-0623,Beijing,102.58,162.97,51.82,15.81,1.229,Uncalculated
+STN-ENV-0624,Delhi,87.22,139.32,34.75,10.94,1.01,Uncalculated
+STN-ENV-0625,Delhi,174.75,277.11,78.97,25.21,1.951,Uncalculated
+STN-ENV-0626,New York,24.48,44.73,16.23,5.23,0.504,Uncalculated
+STN-ENV-0627,New York,13.98,18.66,8.07,1.99,0.242,Uncalculated
+STN-ENV-0628,Sydney,12.38,20.5,8.08,0.58,0.233,Uncalculated
+STN-ENV-0629,Delhi,232.88,375.3,101.64,33.72,2.708,Uncalculated
+STN-ENV-0630,Sydney,15.57,25.56,8.05,3.42,0.195,Uncalculated
+STN-ENV-0631,Beijing,67.4,111.71,30.22,9.33,0.801,Uncalculated
+STN-ENV-0632,Delhi,165.08,261.97,70.9,25.53,2.059,Uncalculated
+STN-ENV-0633,New York,14.21,25.85,8.99,1.19,0.307,Uncalculated
+STN-ENV-0634,Paris,15.77,28.5,4.64,0.67,0.046,Uncalculated
+STN-ENV-0635,Sydney,11.8,23.72,3.21,2.14,0.034,Uncalculated
+STN-ENV-0636,Sydney,13.65,12.42,7.44,1.9,0.228,Uncalculated
+STN-ENV-0637,Tokyo,21.65,37.19,9.31,4.28,0.209,Uncalculated
+STN-ENV-0638,New York,26.54,46.97,12.45,5.31,0.4,Uncalculated
+STN-ENV-0639,Beijing,95.51,150.76,42.37,13.79,1.109,Uncalculated
+STN-ENV-0640,Sydney,7.16,8.71,7.46,1.6,-0.039,Uncalculated
+STN-ENV-0641,Paris,23.63,34.31,7.86,2.96,0.108,Uncalculated
+STN-ENV-0642,Paris,29.81,42.54,12.02,5.42,0.406,Uncalculated
+STN-ENV-0643,Paris,26.66,45.98,13.44,4.35,0.371,Uncalculated
+STN-ENV-0644,London,20.91,44.87,6.45,2.2,0.348,Uncalculated
+STN-ENV-0645,London,21.65,31.85,6.64,2.19,0.293,Uncalculated
+STN-ENV-0646,Berlin,20.48,30.44,9.63,3.48,-0.13,Uncalculated
+STN-ENV-0647,Paris,12.21,19.61,8.1,3.57,0.197,Uncalculated
+STN-ENV-0648,Sydney,15.46,16.73,9.95,3.67,0.04,Uncalculated
+STN-ENV-0649,Beijing,82.65,128.76,37.47,10.98,0.805,Uncalculated
+STN-ENV-0650,Delhi,164.77,263.34,72.13,23.46,1.778,Uncalculated
+STN-ENV-0651,Beijing,36.01,53.14,17.03,4.37,0.224,Uncalculated
+STN-ENV-0652,London,28.3,51.28,14.44,3.35,0.368,Uncalculated
+STN-ENV-0653,New York,15.64,18.55,7.82,-0.38,0.115,Uncalculated
+STN-ENV-0654,Sydney,19.62,35.9,12.53,4.13,0.084,Uncalculated
+STN-ENV-0655,Berlin,29.07,53.85,10.04,3.68,0.351,Uncalculated
+STN-ENV-0656,London,13.38,23.31,3.93,2.7,,Uncalculated
+STN-ENV-0657,Delhi,168.6,269.07,79.15,24.82,2.121,Uncalculated
+STN-ENV-0658,Tokyo,13.42,22.71,1.62,1.98,0.306,Uncalculated
+STN-ENV-0659,Berlin,15.96,23.34,5.57,1.37,0.17,Uncalculated
+STN-ENV-0660,London,16.92,16.88,5.42,2.49,0.341,Uncalculated
+STN-ENV-0661,Beijing,94.52,146.33,37.84,12.87,1.272,Uncalculated
+STN-ENV-0662,Berlin,20.54,32.81,8.68,3.05,0.255,Uncalculated
+STN-ENV-0663,Sydney,8.4,8.73,6.02,3.45,0.274,Uncalculated
+STN-ENV-0664,Beijing,94.35,148.89,42.93,14.93,1.07,Uncalculated
+STN-ENV-0665,Paris,22.78,38.84,12.65,3.85,0.078,Uncalculated
+STN-ENV-0666,Paris,13.08,21.65,9.46,-0.02,0.001,Uncalculated
+STN-ENV-0667,Paris,21.4,39.53,8.47,4.06,0.19,Uncalculated
+STN-ENV-0668,Berlin,26.89,44.49,20.04,5.03,0.376,Uncalculated
+STN-ENV-0669,Tokyo,16.2,27.68,6.25,2.83,0.079,Uncalculated
+STN-ENV-0670,Delhi,75.76,117.65,33.45,11.68,0.841,Uncalculated
+STN-ENV-0671,Sydney,14.44,16.45,4.38,1.96,0.048,Uncalculated
+STN-ENV-0672,Berlin,14.59,21.29,8.2,3.16,0.11,Uncalculated
+STN-ENV-0673,New York,23.18,33.45,9.56,5.57,0.412,Uncalculated
+STN-ENV-0674,Sydney,11.48,17.54,4.93,2.22,0.174,Uncalculated
+STN-ENV-0675,Beijing,122.44,190.57,54.48,16.91,1.412,Uncalculated
+STN-ENV-0676,Beijing,81.36,134.39,35.93,10.86,1.098,Uncalculated
+STN-ENV-0677,Berlin,13.56,18.05,6.58,3.12,0.165,Uncalculated
+STN-ENV-0678,Berlin,16.77,25.02,6.2,1.07,0.215,Uncalculated
+STN-ENV-0679,Delhi,96.99,155.09,42.44,14.85,1.278,Uncalculated
+STN-ENV-0680,Tokyo,17.06,32.91,10.89,2.04,0.17,Uncalculated
+STN-ENV-0681,Berlin,27.41,52.64,11.45,2.5,0.421,Uncalculated
+STN-ENV-0682,Paris,31.49,59.52,15.32,5.97,0.462,Uncalculated
+STN-ENV-0683,Delhi,211.44,331.9,92.48,32.78,2.523,Uncalculated
+STN-ENV-0684,New York,24.64,37.55,9.75,1.66,0.156,Uncalculated
+STN-ENV-0685,Paris,24.86,36.96,7.49,4.45,0.3,Uncalculated
+STN-ENV-0686,New York,16.51,28.27,12.99,2.98,0.312,Uncalculated
+STN-ENV-0687,London,21.35,35.7,13.73,4.46,0.338,Uncalculated
+STN-ENV-0688,New York,21.28,31.14,11.36,3.44,0.426,Uncalculated
+STN-ENV-0689,Paris,28.67,42.57,19.36,6.44,0.295,Uncalculated
+STN-ENV-0690,London,14.39,18.03,8.79,1.97,0.251,Uncalculated
+STN-ENV-0691,Paris,24.32,25.63,10.43,3.24,0.191,Uncalculated
+STN-ENV-0692,Beijing,51.56,76.01,24.32,6.27,0.639,Uncalculated
+STN-ENV-0693,Paris,26.03,45.97,15.79,2.5,0.423,Uncalculated
+STN-ENV-0694,London,23.38,44.73,7.88,1.97,0.371,Uncalculated
+STN-ENV-0695,New York,13.08,27.67,2.37,2.29,0.167,Uncalculated
+STN-ENV-0696,Beijing,56.53,94.99,26.66,8.08,0.652,Uncalculated
+STN-ENV-0697,Tokyo,12.17,14.41,3.72,2.32,0.047,Uncalculated
+STN-ENV-0698,Tokyo,17.2,21.61,0.96,0.77,,Uncalculated
+STN-ENV-0699,Sydney,7.81,3.44,-0.22,-0.11,-0.037,Uncalculated
+STN-ENV-0700,Tokyo,24.2,35.81,9.96,2.32,0.256,Uncalculated
+STN-ENV-0701,Tokyo,19.96,32.38,9.13,6.25,0.059,Uncalculated
+STN-ENV-0702,Delhi,160.97,252.51,72.67,23.9,1.8,Uncalculated
+STN-ENV-0703,Tokyo,10.85,19.51,10.9,1.53,0.215,Uncalculated
+STN-ENV-0704,London,26.47,45.6,11.29,3.85,0.392,Uncalculated
+STN-ENV-0705,Berlin,22.09,32.96,10.77,5.64,0.236,Uncalculated
+STN-ENV-0706,Tokyo,14.93,17.19,1.84,-0.18,0.186,Uncalculated
+STN-ENV-0707,Paris,14.75,30.5,6.54,2.12,0.197,Uncalculated
+STN-ENV-0708,Berlin,18.64,30.0,9.39,0.36,0.27,Uncalculated
+STN-ENV-0709,Tokyo,15.9,35.15,3.03,-1.18,0.226,Uncalculated
+STN-ENV-0710,Berlin,16.98,27.63,4.84,1.45,0.07,Uncalculated
+STN-ENV-0711,New York,18.12,29.8,9.62,3.34,-0.027,Uncalculated
+STN-ENV-0712,London,23.61,32.95,8.98,2.34,0.182,Uncalculated
+STN-ENV-0713,London,7.0,9.08,2.84,1.64,0.069,Uncalculated
+STN-ENV-0714,Sydney,16.29,18.27,8.95,2.6,0.291,Uncalculated
+STN-ENV-0715,Berlin,23.74,31.27,16.79,3.35,,Uncalculated
+STN-ENV-0716,Sydney,12.63,23.92,5.02,3.79,0.205,Uncalculated
+STN-ENV-0717,Beijing,81.94,129.69,42.18,11.4,0.894,Uncalculated
+STN-ENV-0718,Delhi,177.91,282.54,74.18,27.26,2.128,Uncalculated
+STN-ENV-0719,Paris,23.75,34.29,11.13,0.86,0.292,Uncalculated
+STN-ENV-0720,Berlin,17.68,26.36,6.95,2.8,,Uncalculated
+STN-ENV-0721,London,25.69,46.78,9.96,3.47,0.201,Uncalculated
+STN-ENV-0722,Sydney,18.28,29.97,10.2,0.97,0.197,Uncalculated
+STN-ENV-0723,New York,16.66,20.76,6.85,3.1,0.266,Uncalculated
+STN-ENV-0724,Tokyo,19.91,37.01,2.89,1.88,0.148,Uncalculated
+STN-ENV-0725,London,14.57,31.93,1.79,4.78,0.154,Uncalculated
+STN-ENV-0726,New York,24.76,42.09,13.31,0.06,0.433,Uncalculated
+STN-ENV-0727,Tokyo,14.5,27.65,1.61,2.55,0.122,Uncalculated
+STN-ENV-0728,Delhi,182.4,297.95,84.33,27.42,2.19,Uncalculated
+STN-ENV-0729,London,19.5,22.92,9.15,2.5,0.223,Uncalculated
+STN-ENV-0730,Sydney,12.14,28.74,4.95,1.03,0.127,Uncalculated
+STN-ENV-0731,London,28.16,50.54,12.43,4.33,0.505,Uncalculated
+STN-ENV-0732,Berlin,15.52,27.27,8.53,3.92,0.217,Uncalculated
+STN-ENV-0733,Berlin,22.25,34.98,6.48,0.83,0.11,Uncalculated
+STN-ENV-0734,New York,18.52,22.94,8.46,1.57,0.375,Uncalculated
+STN-ENV-0735,Sydney,15.59,23.29,3.6,0.76,0.215,Uncalculated
+STN-ENV-0736,Beijing,122.97,198.99,55.83,16.8,,Uncalculated
+STN-ENV-0737,Berlin,17.75,22.88,9.93,3.18,0.348,Uncalculated
+STN-ENV-0738,Paris,10.84,16.99,5.37,2.51,0.052,Uncalculated
+STN-ENV-0739,Delhi,115.92,179.55,53.99,18.98,1.563,Uncalculated
+STN-ENV-0740,Paris,38.6,59.83,15.27,6.7,0.472,Uncalculated
+STN-ENV-0741,London,17.04,20.5,7.48,3.59,0.305,Uncalculated
+STN-ENV-0742,Paris,34.63,48.11,14.87,3.08,0.722,Uncalculated
+STN-ENV-0743,Tokyo,15.27,26.14,5.96,4.52,0.201,Uncalculated
+STN-ENV-0744,Delhi,117.92,185.77,50.66,17.37,1.405,Uncalculated
+STN-ENV-0745,Paris,28.68,43.45,11.61,5.85,0.237,Uncalculated
+STN-ENV-0746,Tokyo,20.97,30.38,6.1,1.08,0.24,Uncalculated
+STN-ENV-0747,New York,26.69,56.31,6.93,3.64,0.217,Uncalculated
+STN-ENV-0748,Paris,24.03,41.48,8.71,5.02,0.27,Uncalculated
+STN-ENV-0749,Delhi,176.2,285.5,81.17,26.47,2.404,Uncalculated
+STN-ENV-0750,Tokyo,22.33,31.85,10.75,2.22,0.28,Uncalculated
+STN-ENV-0751,Paris,30.89,51.95,10.13,6.6,0.315,Uncalculated
+STN-ENV-0752,New York,18.57,28.57,7.14,1.03,0.202,Uncalculated
+STN-ENV-0753,Paris,30.2,44.41,15.67,4.5,0.321,Uncalculated
+STN-ENV-0754,Tokyo,15.65,34.69,5.7,3.31,0.293,Uncalculated
+STN-ENV-0755,Paris,23.06,39.76,6.12,6.6,0.268,Uncalculated
+STN-ENV-0756,Delhi,133.78,216.66,66.98,19.38,1.766,Uncalculated
+STN-ENV-0757,London,15.01,19.16,6.25,1.84,0.149,Uncalculated
+STN-ENV-0758,Sydney,6.79,4.52,-0.43,0.35,0.056,Uncalculated
+STN-ENV-0759,Sydney,15.67,24.79,7.57,2.71,0.098,Uncalculated
+STN-ENV-0760,Tokyo,14.84,20.88,6.42,3.11,0.14,Uncalculated
+STN-ENV-0761,Tokyo,16.79,29.92,2.93,4.16,0.028,Uncalculated
+STN-ENV-0762,Tokyo,14.71,26.94,6.9,3.34,,Uncalculated
+STN-ENV-0763,Tokyo,16.85,27.28,10.53,1.78,0.265,Uncalculated
+STN-ENV-0764,Paris,20.96,37.68,8.74,4.36,0.077,Uncalculated
+STN-ENV-0765,Delhi,184.77,296.6,76.96,27.85,2.258,Uncalculated
+STN-ENV-0766,Sydney,10.23,12.01,5.63,2.65,0.073,Uncalculated
+STN-ENV-0767,New York,31.43,49.3,15.95,5.92,0.471,Uncalculated
+STN-ENV-0768,Sydney,15.42,25.35,5.18,4.76,0.013,Uncalculated
+STN-ENV-0769,Delhi,123.39,202.08,53.79,17.98,1.541,Uncalculated
+STN-ENV-0770,Tokyo,19.44,32.23,15.52,2.1,0.266,Uncalculated
+STN-ENV-0771,Beijing,96.04,150.8,41.24,15.08,1.189,Uncalculated
+STN-ENV-0772,Paris,29.05,51.31,9.71,6.13,0.461,Uncalculated
+STN-ENV-0773,Beijing,104.98,169.88,47.32,15.83,1.267,Uncalculated
+STN-ENV-0774,Paris,25.12,47.92,13.03,5.64,0.057,Uncalculated
+STN-ENV-0775,Tokyo,13.71,22.36,7.76,3.09,0.209,Uncalculated
+STN-ENV-0776,Paris,27.85,39.37,5.13,3.87,0.366,Uncalculated
+STN-ENV-0777,Tokyo,16.94,32.98,5.64,3.39,0.179,Uncalculated
+STN-ENV-0778,Delhi,42.38,64.92,22.53,5.7,0.424,Uncalculated
+STN-ENV-0779,Berlin,20.85,34.84,10.36,3.49,0.214,Uncalculated
+STN-ENV-0780,London,16.33,27.06,3.64,0.84,0.342,Uncalculated
+STN-ENV-0781,Paris,21.25,34.23,13.29,3.09,0.163,Uncalculated
+STN-ENV-0782,Tokyo,18.03,27.99,11.01,4.2,0.042,Uncalculated
+STN-ENV-0783,Beijing,51.99,74.92,22.5,8.95,0.477,Uncalculated
+STN-ENV-0784,Tokyo,18.63,24.79,11.02,3.73,0.22,Uncalculated
+STN-ENV-0785,Beijing,78.27,130.84,41.22,12.17,1.106,Uncalculated
+STN-ENV-0786,Sydney,9.37,17.13,1.05,1.65,0.333,Uncalculated
+STN-ENV-0787,Paris,24.28,48.39,12.59,1.74,0.356,Uncalculated
+STN-ENV-0788,New York,12.7,15.14,11.67,1.6,0.054,Uncalculated
+STN-ENV-0789,Beijing,86.61,138.42,40.93,13.26,0.952,Uncalculated
+STN-ENV-0790,Tokyo,20.12,38.0,6.79,1.33,0.329,Uncalculated
+STN-ENV-0791,Paris,25.83,38.5,12.34,1.25,0.443,Uncalculated
+STN-ENV-0792,Tokyo,21.55,32.05,13.81,4.93,0.194,Uncalculated
+STN-ENV-0793,New York,28.41,43.99,9.74,4.34,0.483,Uncalculated
+STN-ENV-0794,London,19.59,29.12,8.73,3.25,0.212,Uncalculated
+STN-ENV-0795,Berlin,24.2,41.38,10.16,4.46,0.362,Uncalculated
+STN-ENV-0796,Berlin,18.6,20.85,6.47,1.32,0.338,Uncalculated
+STN-ENV-0797,New York,18.15,37.26,8.89,2.12,0.07,Uncalculated
+STN-ENV-0798,Delhi,126.25,197.21,56.51,21.19,1.56,Uncalculated
+STN-ENV-0799,Paris,25.6,30.38,13.45,3.11,0.45,Uncalculated
+STN-ENV-0800,New York,27.97,44.7,16.01,3.8,0.28,Uncalculated
+STN-ENV-0005,Tokyo,21.59,31.2,14.77,3.21,0.213,Uncalculated
+STN-ENV-0019,Beijing,64.23,99.79,31.24,9.09,0.812,Uncalculated
+STN-ENV-0100,Tokyo,25.09,48.57,5.4,3.96,0.306,Uncalculated

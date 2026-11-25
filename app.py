@@ -194,30 +194,42 @@ if selected_page == "🏠 Upload & Overview":
                 st.rerun()
 
         st.markdown("---")
-        st.markdown("#### 🧪 Or Load Pre-configured Sample Datasets")
-        sc1, sc2 = st.columns(2)
+        st.markdown("#### 🧪 Load Pre-Configured Benchmark Datasets")
+        st.caption("Select a real-world dataset to test DataSentry's profiling, remediation, and research algorithms:")
+
+        sc1, sc2, sc3 = st.columns(3)
         with sc1:
-            if st.button("Load 'Messy Business Data' (CSV)", use_container_width=True):
-                path = os.path.join("sample_data", "sample_messy_dataset.csv")
-                if os.path.exists(path):
-                    with open(path, "rb") as f:
-                        buf = io.BytesIO(f.read())
-                        buf.name = "sample_messy_dataset.csv"
-                        load_file_into_session(buf)
-                        st.rerun()
-                else:
-                    st.error("Sample dataset file not found on disk.")
+            if st.button("📡 Intel Lab IoT Sensors (1,005 rows)", use_container_width=True):
+                path = os.path.join("data", "intel_lab_iot_sensors.csv")
+                if not os.path.exists(path):
+                    path = os.path.join("sample_data", "iot_sensor_multivariate.csv")
+                with open(path, "rb") as f:
+                    buf = io.BytesIO(f.read())
+                    buf.name = "intel_lab_iot_sensors.csv"
+                    load_file_into_session(buf)
+                    st.rerun()
+
         with sc2:
-            if st.button("Load 'IoT Correlated Sensors' (CSV)", use_container_width=True):
-                path = os.path.join("sample_data", "iot_sensor_multivariate.csv")
-                if os.path.exists(path):
-                    with open(path, "rb") as f:
-                        buf = io.BytesIO(f.read())
-                        buf.name = "iot_sensor_multivariate.csv"
-                        load_file_into_session(buf)
-                        st.rerun()
-                else:
-                    st.error("IoT sample dataset not found on disk.")
+            if st.button("🌍 Global Air Quality (803 rows)", use_container_width=True):
+                path = os.path.join("data", "global_air_quality_cities.csv")
+                if not os.path.exists(path):
+                    path = os.path.join("sample_data", "sample_messy_dataset.csv")
+                with open(path, "rb") as f:
+                    buf = io.BytesIO(f.read())
+                    buf.name = "global_air_quality_cities.csv"
+                    load_file_into_session(buf)
+                    st.rerun()
+
+        with sc3:
+            if st.button("🛍️ Customer Churn & Demographics (604 rows)", use_container_width=True):
+                path = os.path.join("data", "ecommerce_customer_churn_messy.csv")
+                if not os.path.exists(path):
+                    path = os.path.join("sample_data", "sample_messy_dataset.csv")
+                with open(path, "rb") as f:
+                    buf = io.BytesIO(f.read())
+                    buf.name = "ecommerce_customer_churn_messy.csv"
+                    load_file_into_session(buf)
+                    st.rerun()
 
     with col2:
         st.markdown("#### 🌟 Key Capabilities")
