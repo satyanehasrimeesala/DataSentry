@@ -8,9 +8,10 @@ Supports:
 - Comprehensive validation for empty, malformed, or corrupt files
 """
 
-import os
 import io
-from typing import Dict, Any, List, Optional, Tuple, Union
+import os
+from typing import Any, Dict, List, Optional, Tuple, Union
+
 import pandas as pd
 
 

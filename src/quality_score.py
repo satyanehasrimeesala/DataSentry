@@ -10,13 +10,14 @@ Computes four defensible dimensions (0 to 100):
 Aggregates dimensions via configurable weights with grade badges and impact explanations.
 """
 
-from typing import Dict, Any, Optional
-import pandas as pd
-from .missing_values import analyze_missing_values
-from .duplicates import detect_duplicates
-from .outliers import detect_outliers_iqr
-from .consistency import analyze_consistency
+from typing import Any, Dict, Optional
 
+import pandas as pd
+
+from .consistency import analyze_consistency
+from .duplicates import detect_duplicates
+from .missing_values import analyze_missing_values
+from .outliers import detect_outliers_iqr
 
 DEFAULT_WEIGHTS = {
     "completeness": 0.35,

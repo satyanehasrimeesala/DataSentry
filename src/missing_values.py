@@ -10,9 +10,10 @@ Features:
 - High-loss warnings for destructive operations
 """
 
-from typing import Dict, Any, List, Optional, Tuple, Union
-import pandas as pd
+from typing import Any, Dict, List, Optional, Tuple
+
 import numpy as np
+import pandas as pd
 from sklearn.impute import KNNImputer
 
 

@@ -14,21 +14,21 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-# Application Configuration & UI Theming
-from src.config import UI_CONFIG, QUALITY_GRADES, QUALITY_WEIGHTS, OUTLIER_CONFIG
-from src.ui.theme import inject_custom_css, get_plotly_template, get_grade_color
-
 # Core Analytical Modules
 from src.cleaning import CleaningWorkflowManager
-from src.consistency import analyze_consistency, normalize_text, validate_custom_rules, convert_column_type
+
+# Application Configuration & UI Theming
+from src.config import OUTLIER_CONFIG, UI_CONFIG
+from src.consistency import (
+    analyze_consistency,
+)
 from src.data_loader import DataLoaderError, get_excel_sheet_names, load_dataset
-from src.duplicates import detect_duplicates, remove_duplicates
-from src.missing_values import analyze_missing_values, impute_or_drop_missing
+from src.duplicates import detect_duplicates
+from src.missing_values import analyze_missing_values
 from src.outliers import (
     detect_outliers_iqr,
     detect_outliers_modified_zscore,
     detect_outliers_zscore,
-    remediate_outliers,
 )
 from src.profiler import profile_dataset
 from src.quality_score import calculate_quality_score
@@ -39,7 +39,7 @@ from src.reporting import (
     export_report_to_text,
     generate_comparison_report,
 )
-
+from src.ui.theme import get_grade_color, get_plotly_template, inject_custom_css
 
 # ------------------------------------------------------------------------------
 # 1. STREAMLIT PAGE INITIALIZATION & CACHING
@@ -783,21 +783,21 @@ elif selected_page == "🔬 Research Lab (GARDA+)":
             )
             st.latex(r"\text{Conf}(X \to Y) = \frac{|\sigma(X \cup Y)|}{|\sigma(X)| - |\text{Dis}(Y) \cap \sigma(X)|}")
             st.markdown(
-                """
+                r"""
                 3. **Limitation**: Reconstructs continuous values as flat interval midpoints $(a+b)/2$, discarding intra-granule trajectory and causing systematic quantization error $O(\lambda^2/12)$.
                 """
             )
         with th2:
             st.markdown("### 🚀 Our Innovation: GARDA+")
             st.markdown(
-                """
+                r"""
                 1. **Adaptive Dispersion Granulation**: Automatically sizes bins via Freedman-Diaconis rule $h = 2 \cdot \text{IQR} \cdot n^{-1/3}$.
                 2. **Sign-Coupled Local Density Reconstruction (LDR)**:
                 """
             )
             st.latex(r"\hat{y} = b_{\text{low}} + \alpha_{\text{coupled}} \cdot (b_{\text{high}} - b_{\text{low}})")
             st.markdown(
-                """
+                r"""
                 3. **Entropy Gating (EG-Defense)**: Prunes ambiguous rules where Shannon conditional entropy $H(Y \mid X) > \theta_H$.
                 """
             )

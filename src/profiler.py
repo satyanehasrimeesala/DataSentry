@@ -8,9 +8,10 @@ Calculates:
 - Quick summaries for numeric, categorical, boolean, and datetime fields
 """
 
-from typing import Dict, Any, List
-import pandas as pd
+from typing import Any, Dict, List
+
 import numpy as np
+import pandas as pd
 
 
 def profile_dataset(df: pd.DataFrame) -> Dict[str, Any]:

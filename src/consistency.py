@@ -11,9 +11,9 @@ Capabilities:
 - Safe normalization transformations (strip, case-standardize, regex clean)
 """
 
-from typing import Dict, Any, List, Optional, Tuple, Set
+from typing import Any, Dict, List, Optional, Tuple
+
 import pandas as pd
-import numpy as np
 
 
 def analyze_consistency(df: pd.DataFrame) -> Dict[str, Any]:

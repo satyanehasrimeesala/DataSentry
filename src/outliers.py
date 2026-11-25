@@ -9,9 +9,10 @@ Implements:
 - Remediation strategies: Drop outlier rows, Cap (Winsorize) at bounds, or Keep
 """
 
-from typing import Dict, Any, List, Optional, Tuple
-import pandas as pd
+from typing import Any, Dict, List, Optional, Tuple
+
 import numpy as np
+import pandas as pd
 
 
 def detect_outliers_iqr(

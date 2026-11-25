@@ -10,13 +10,15 @@ Features:
 
 import io
 import json
-from typing import Dict, Any, List
 from datetime import datetime
+from typing import Any, Dict, List
+
 import pandas as pd
-from .missing_values import analyze_missing_values
-from .duplicates import detect_duplicates
-from .outliers import detect_outliers_iqr
+
 from .consistency import analyze_consistency
+from .duplicates import detect_duplicates
+from .missing_values import analyze_missing_values
+from .outliers import detect_outliers_iqr
 from .quality_score import calculate_quality_score
 
 

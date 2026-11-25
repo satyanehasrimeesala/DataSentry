@@ -5,10 +5,10 @@ Provides a unified, professional appearance across both Light and Dark mode,
 mapping semantic colors to dataset health grades and rendering publication-ready charts.
 """
 
-from typing import Dict, Any
-import streamlit as st
 import plotly.graph_objects as go
-from ..config import QUALITY_GRADES, UI_CONFIG
+import streamlit as st
+
+from ..config import QUALITY_GRADES
 
 
 def get_grade_color(score: float) -> str:
