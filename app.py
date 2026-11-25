@@ -12,7 +12,7 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 
-# Local modules
+# Local modules (eager lightweight analytics)
 from src.data_loader import (
     load_dataset,
     get_excel_sheet_names,
@@ -23,7 +23,7 @@ from src.data_loader import (
 from src.profiler import profile_dataset
 from src.missing_values import analyze_missing_values
 from src.duplicates import detect_duplicates
-from src.outliers import detect_outliers_iqr, detect_outliers_zscore
+from src.outliers import detect_outliers_iqr, detect_outliers_zscore, detect_outliers_modified_zscore
 from src.consistency import analyze_consistency, validate_custom_rules
 from src.quality_score import calculate_quality_score
 from src.cleaning import CleaningWorkflowManager
@@ -34,8 +34,6 @@ from src.reporting import (
     export_report_to_json_bytes,
     export_report_to_text
 )
-from src.garda_base import GardaImputer
-from src.garda_upgraded import UpgradedGardaImputer, benchmark_imputation_methods
 
 
 # Configure Streamlit page
@@ -849,6 +847,7 @@ elif selected_page == "🔬 Research Lab (GARDA Base & Upgraded)":
                                 st.error("Need at least 10 complete rows without NaN to run ground-truth validation.")
                             else:
                                 err_key = "mcar" if "MCAR" in error_mod else "consecutive"
+                                from src.garda_upgraded import benchmark_imputation_methods
                                 bench_results = benchmark_imputation_methods(
                                     df_complete=clean_test_df,
                                     numeric_cols=sel_bench_cols,
@@ -905,6 +904,7 @@ elif selected_page == "🔬 Research Lab (GARDA Base & Upgraded)":
 
                 if st.button("Apply GARDA+ Imputation to Dataset", type="primary"):
                     with st.spinner("Mining granular association rules and reconstructing continuous values..."):
+                        from src.garda_upgraded import UpgradedGardaImputer
                         imputer = UpgradedGardaImputer(init_sup=sup_val, init_conf=conf_val)
                         imputed_df, summary = imputer.fit_transform(df, num_cols)
 
