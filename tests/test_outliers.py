@@ -3,7 +3,12 @@ test_outliers.py - Unit tests for statistical outlier detection and winsorizatio
 """
 
 import pandas as pd
-from src.outliers import detect_outliers_iqr, detect_outliers_zscore, remediate_outliers
+from src.outliers import (
+    detect_outliers_iqr,
+    detect_outliers_zscore,
+    detect_outliers_modified_zscore,
+    remediate_outliers
+)
 
 
 def test_detect_outliers_iqr():
@@ -47,3 +52,34 @@ def test_outliers_constant_column():
     res = detect_outliers_iqr(df, target_columns=["const"])
     assert res["columns"]["const"]["status"] == "constant_or_zero_iqr"
     assert res["columns"]["const"]["outlier_count"] == 0
+
+
+def test_detect_outliers_modified_zscore_mad():
+    # Values around 20 with one extreme outlier 500 (Reference Paper 3 MAD approach)
+    data = [20.0, 20.2, 19.8, 20.1, 20.3, 19.9, 20.0, 20.2, 500.0]
+    df = pd.DataFrame({"sensor": data})
+
+    res = detect_outliers_modified_zscore(df, target_columns=["sensor"], threshold=3.5)
+    col_info = res["columns"]["sensor"]
+
+    assert col_info["status"] == "analyzed"
+    assert col_info["outlier_count"] == 1
+    assert 8 in col_info["outlier_indices"]
+    assert col_info["mad"] > 0
+
+
+def test_remediate_outliers_modified_zscore():
+    data = [20.0, 20.2, 19.8, 20.1, 20.3, 19.9, 20.0, 20.2, 500.0]
+    df = pd.DataFrame({"sensor": data})
+
+    cleaned_df, summary = remediate_outliers(
+        df,
+        strategy="cap",
+        target_columns=["sensor"],
+        method="MODIFIED_ZSCORE",
+        threshold=3.5
+    )
+
+    assert len(cleaned_df) == len(df)
+    assert summary["affected_cells"] == 1
+    assert cleaned_df["sensor"].max() < 100.0

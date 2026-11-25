@@ -503,35 +503,74 @@ elif selected_page == "📈 Outlier Detection":
             with c1:
                 selected_num_cols = st.multiselect("Select Numeric Columns to Analyze:", num_cols, default=num_cols[:min(4, len(num_cols))])
             with c2:
-                method = st.selectbox("Detection Method:", ["IQR (Interquartile Range)", "Z-Score (|z| > 3.0)"])
+                method = st.selectbox(
+                    "Detection Method:",
+                    [
+                        "Modified Z-Score (MAD / Hybrid Scale - IEEE 2024)",
+                        "IQR (Interquartile Range)",
+                        "Z-Score (|z| > 3.0)"
+                    ]
+                )
             with c3:
                 multiplier = 1.5
+                thresh = 3.5
                 if "IQR" in method:
                     multiplier = st.selectbox("IQR Multiplier (k):", [1.5, 3.0], format_func=lambda x: f"{x}x ({'Mild/Standard' if x == 1.5 else 'Extreme Only'})")
+                elif "Modified" in method:
+                    thresh = st.slider("Modified Z-Score Threshold (MAD):", 2.5, 5.0, 3.5, 0.5, help="Standard recommendation by Iglewicz & Hoaglin is 3.5")
+                else:
+                    thresh = st.slider("Z-Score Threshold (σ):", 2.0, 4.0, 3.0, 0.5)
 
             if selected_num_cols:
-                iqr_res = detect_outliers_iqr(df, target_columns=selected_num_cols, multiplier=multiplier)
+                if "Modified" in method:
+                    from src.outliers import detect_outliers_modified_zscore
+                    outlier_res = detect_outliers_modified_zscore(df, target_columns=selected_num_cols, threshold=thresh)
+                    method_key = "MODIFIED_ZSCORE"
+                elif "IQR" in method:
+                    outlier_res = detect_outliers_iqr(df, target_columns=selected_num_cols, multiplier=multiplier)
+                    method_key = "IQR"
+                else:
+                    outlier_res = detect_outliers_zscore(df, target_columns=selected_num_cols, threshold=thresh)
+                    method_key = "ZSCORE"
 
                 m1, m2, m3 = st.columns(3)
-                m1.metric("Outlier Data Points", f"{iqr_res['total_outlier_points']:,}")
-                m2.metric("Affected Unique Rows", f"{iqr_res['unique_rows_with_outliers']:,}", f"{iqr_res['unique_rows_with_outliers_pct']}%")
+                m1.metric("Outlier Data Points", f"{outlier_res['total_outlier_points']:,}")
+                m2.metric("Affected Unique Rows", f"{outlier_res['unique_rows_with_outliers']:,}")
                 m3.metric("Columns Evaluated", f"{len(selected_num_cols)}")
 
                 # Table of bounds
                 outlier_summary_table = []
                 for c in selected_num_cols:
-                    info = iqr_res["columns"].get(c, {})
+                    info = outlier_res["columns"].get(c, {})
                     if info.get("status") == "analyzed":
-                        outlier_summary_table.append({
+                        row_dict = {
                             "Column": c,
-                            "Q1 (25%)": info.get("q1"),
-                            "Q3 (75%)": info.get("q3"),
-                            "IQR": info.get("iqr"),
-                            "Lower Bound": info.get("lower_bound"),
-                            "Upper Bound": info.get("upper_bound"),
                             "Outliers Count": info.get("outlier_count"),
                             "Outliers %": f"{info.get('outlier_pct')}%"
-                        })
+                        }
+                        if "IQR" in method:
+                            row_dict.update({
+                                "Q1 (25%)": info.get("q1"),
+                                "Q3 (75%)": info.get("q3"),
+                                "IQR": info.get("iqr"),
+                                "Lower Bound": info.get("lower_bound"),
+                                "Upper Bound": info.get("upper_bound")
+                            })
+                        elif "Modified" in method:
+                            row_dict.update({
+                                "Median": info.get("median"),
+                                "MAD": info.get("mad"),
+                                "Lower Bound": info.get("lower_bound"),
+                                "Upper Bound": info.get("upper_bound"),
+                                "Threshold": info.get("threshold")
+                            })
+                        else:
+                            row_dict.update({
+                                "Mean": info.get("mean"),
+                                "Std": info.get("std"),
+                                "Threshold": info.get("threshold")
+                            })
+                        outlier_summary_table.append(row_dict)
                 if outlier_summary_table:
                     st.dataframe(pd.DataFrame(outlier_summary_table), use_container_width=True)
 
@@ -559,7 +598,9 @@ elif selected_page == "📈 Outlier Detection":
                         res = mgr.apply_outlier_remediation(
                             strategy=remediation_action,
                             target_columns=selected_num_cols,
-                            multiplier=multiplier
+                            method=method_key,
+                            multiplier=multiplier,
+                            threshold=thresh
                         )
                         st.success(f"Remediation applied! Affected cells: {res['details']['affected_cells']}.")
                         if res['details'].get('warnings'):

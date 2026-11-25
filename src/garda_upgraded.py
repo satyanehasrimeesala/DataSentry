@@ -28,6 +28,90 @@ from sklearn.impute import KNNImputer
 from sklearn.metrics import root_mean_squared_error, mean_absolute_error, r2_score
 
 
+class MultiSNNImputer:
+    """
+    Multi-SNN (Sequential / Spatial Nearest Neighbor Imputer) based on Reference Paper 2:
+    'New Imputation Technique Based a Multi-SNN to Handle Missing Data in the IoT' (IEEE).
+
+    Combines temporal sequence proximity and multi-attribute feature space distance (Euclidean/Manhattan)
+    with adaptive distance-decay weighting to reconstruct missing readings without external APIs.
+    """
+    def __init__(self, k_neighbors: int = 5, distance_metric: str = "euclidean", temporal_weight: float = 0.3):
+        self.k_neighbors = k_neighbors
+        self.distance_metric = distance_metric
+        self.temporal_weight = temporal_weight
+
+    def fit_transform(self, df: pd.DataFrame, numeric_cols: List[str]) -> Tuple[pd.DataFrame, Dict[str, Any]]:
+        t0 = time.time()
+        imputed_df = df.copy()
+        n_rows = len(imputed_df)
+        initial_missing = int(imputed_df[numeric_cols].isna().sum().sum())
+        imputed_count = 0
+
+        # Normalization factors for distance computation
+        col_stds = {}
+        col_means = {}
+        for c in numeric_cols:
+            s = imputed_df[c].dropna()
+            std = float(s.std()) if len(s) > 1 and s.std() > 0 else 1.0
+            col_stds[c] = std
+            col_means[c] = float(s.mean()) if len(s) > 0 else 0.0
+
+        for r_idx in range(n_rows):
+            for c in numeric_cols:
+                if pd.isna(imputed_df.iat[r_idx, imputed_df.columns.get_loc(c)]):
+                    # Candidate donor rows where feature 'c' is observed
+                    donor_candidates = []
+                    other_cols = [col for col in numeric_cols if col != c]
+
+                    for d_idx in range(n_rows):
+                        if d_idx != r_idx and not pd.isna(imputed_df.iat[d_idx, imputed_df.columns.get_loc(c)]):
+                            # 1. Feature-space distance on overlapping observed attributes
+                            feat_dist = 0.0
+                            overlap_count = 0
+                            for oc in other_cols:
+                                v_r = imputed_df.iat[r_idx, imputed_df.columns.get_loc(oc)]
+                                v_d = imputed_df.iat[d_idx, imputed_df.columns.get_loc(oc)]
+                                if not pd.isna(v_r) and not pd.isna(v_d):
+                                    norm_diff = abs(v_r - v_d) / col_stds[oc]
+                                    feat_dist += norm_diff ** 2 if self.distance_metric == "euclidean" else norm_diff
+                                    overlap_count += 1
+
+                            if overlap_count > 0:
+                                feat_dist = np.sqrt(feat_dist / overlap_count) if self.distance_metric == "euclidean" else (feat_dist / overlap_count)
+                            else:
+                                feat_dist = 1.0
+
+                            # 2. Sequential / Temporal distance
+                            temp_dist = abs(r_idx - d_idx) / max(1, n_rows)
+
+                            # Multi-SNN combined metric
+                            combined_dist = (1.0 - self.temporal_weight) * feat_dist + (self.temporal_weight * temp_dist)
+                            donor_candidates.append((combined_dist, imputed_df.iat[d_idx, imputed_df.columns.get_loc(c)]))
+
+                    if donor_candidates:
+                        donor_candidates.sort(key=lambda x: x[0])
+                        top_k = donor_candidates[:min(self.k_neighbors, len(donor_candidates))]
+                        # Distance-weighted average
+                        weights = [1.0 / (d + 1e-5) for d, _ in top_k]
+                        total_w = sum(weights)
+                        val = sum(w * v for (d, v), w in zip(top_k, weights)) / total_w
+                        imputed_df.iat[r_idx, imputed_df.columns.get_loc(c)] = float(val)
+                        imputed_count += 1
+                    else:
+                        imputed_df.iat[r_idx, imputed_df.columns.get_loc(c)] = col_means[c]
+                        imputed_count += 1
+
+        elapsed = round(time.time() - t0, 3)
+        summary = {
+            "initial_missing": initial_missing,
+            "final_missing": int(imputed_df[numeric_cols].isna().sum().sum()),
+            "imputed_cells": imputed_count,
+            "elapsed_time_sec": elapsed
+        }
+        return imputed_df, summary
+
+
 class UpgradedGranule:
     """Enhanced interval granule with local density tracking and finite domain awareness."""
     def __init__(self, attribute: str, index: int, start: float, end: float, centroid: float, values_sample: np.ndarray, vmin: float, vmax: float):
@@ -565,9 +649,15 @@ def benchmark_imputation_methods(
     from .garda_base import GardaImputer
     base_garda = GardaImputer(granulation_method="kmeans", k_granules=8, init_sup=0.35, init_conf=0.70)
     df_base_garda, _ = base_garda.fit_transform(df_corrupted, numeric_cols)
-    results.append(evaluate_predictions(df_base_garda.values, "Base GARDA (Paper)", time.time() - t0))
+    results.append(evaluate_predictions(df_base_garda.values, "Base GARDA (Paper 1)", time.time() - t0))
 
-    # 6. Upgraded GARDA+ (Our Proposed Upgrade)
+    # 6. Multi-SNN (from Reference Paper 2)
+    t0 = time.time()
+    multi_snn = MultiSNNImputer(k_neighbors=5, temporal_weight=0.3)
+    df_multi_snn, _ = multi_snn.fit_transform(df_corrupted, numeric_cols)
+    results.append(evaluate_predictions(df_multi_snn.values, "Multi-SNN (Paper 2)", time.time() - t0))
+
+    # 7. Upgraded GARDA+ (Our Proposed Upgrade)
     t0 = time.time()
     garda_plus = UpgradedGardaImputer(entropy_threshold=1.3, init_sup=0.35, init_conf=0.70)
     df_garda_plus, plus_summary = garda_plus.fit_transform(df_corrupted, numeric_cols)
@@ -578,7 +668,7 @@ def benchmark_imputation_methods(
     best_model = results_sorted[0]["model"]
 
     # Calculate improvement of GARDA+ over Base GARDA
-    base_rmse = next(r["rmse"] for r in results if r["model"] == "Base GARDA (Paper)")
+    base_rmse = next((r["rmse"] for r in results if "Base GARDA" in r["model"]), 1.0)
     plus_rmse = next(r["rmse"] for r in results if r["model"] == "Proposed GARDA+ (Upgraded)")
     pct_improvement = round(((base_rmse - plus_rmse) / base_rmse) * 100, 2) if base_rmse > 0 else 0.0
 

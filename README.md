@@ -25,10 +25,14 @@ It provides an end-to-end investigative workspace allowing analysts and develope
 
 ## 🎯 2. Project Objectives
 
-- **Zero Cloud Dependence**: Entirely local offline computation. No API keys, no paid tokens, no logins, and zero remote data exposure.
+- **Zero Cloud & Cost-Free Execution**: Entirely local offline computation. No API keys, zero subscription costs, no paid cloud tokens, no logins, and zero remote data exposure.
 - **Explainable Quality Assessment**: Formulate quality not as a black box, but as four defensible mathematical indicators.
 - **Reversible Cleaning Workflows**: Guard against accidental data destruction using linear state-stack rollbacks and audit logs.
-- **Academic Research Integration**: Bridge theoretical research and practical software by implementing and upgrading an IEEE journal algorithm for continuous missing value imputation.
+- **Academic Research Integration**: Bridge theoretical research and practical software by implementing and comparing multiple IEEE benchmark models:
+  - **Paper 1 (Base Paper)**: *GARDA: Granular Association-Rule-Based Data Imputation Approach for IoT Sensor Networks* (IEEE IoTJ 2026).
+  - **Paper 2 (Sequential Benchmark)**: *New Imputation Technique Based on Multi-SNN to Handle Missing Data in the IoT* (IEEE).
+  - **Paper 3 (Robust Outlier Detection)**: *Outlier Detection Performance of a Modified Z-Score Method in Time-Series RSS Observation with Hybrid Scale Estimators (MAD)* (IEEE Access 2024).
+  - **Our Innovation**: **GARDA+**, featuring Freedman-Diaconis adaptive dispersion clustering, correlation-coupled localized density reconstruction (LDR), and Shannon entropy gating.
 
 ---
 

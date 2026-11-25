@@ -5,7 +5,7 @@ test_garda.py - Unit tests for Base Paper GARDA and Proposed Upgraded GARDA+.
 import pandas as pd
 import numpy as np
 from src.garda_base import GardaImputer
-from src.garda_upgraded import UpgradedGardaImputer, benchmark_imputation_methods
+from src.garda_upgraded import UpgradedGardaImputer, MultiSNNImputer, benchmark_imputation_methods
 
 
 def test_base_garda_imputation():
@@ -64,5 +64,21 @@ def test_benchmark_imputation_methods():
     )
 
     assert bench_res["error_model"] == "MCAR"
-    assert len(bench_res["results_table"]) == 6  # Mean, Median, KNN, Ridge, Base GARDA, GARDA+
+    assert len(bench_res["results_table"]) == 7  # Mean, Median, KNN, Ridge, Base GARDA, Multi-SNN, GARDA+
     assert bench_res["injected_missing_count"] > 0
+
+
+def test_multi_snn_imputer():
+    np.random.seed(42)
+    s1 = np.linspace(10, 30, 20)
+    s2 = s1 * 1.5 + np.random.normal(0, 0.2, 20)
+    df = pd.DataFrame({"s1": s1, "s2": s2})
+    df.loc[4, "s1"] = np.nan
+    df.loc[10, "s2"] = np.nan
+
+    imputer = MultiSNNImputer(k_neighbors=3, temporal_weight=0.3)
+    res_df, summary = imputer.fit_transform(df, ["s1", "s2"])
+
+    assert res_df.isna().sum().sum() == 0
+    assert summary["initial_missing"] == 2
+    assert summary["imputed_cells"] == 2

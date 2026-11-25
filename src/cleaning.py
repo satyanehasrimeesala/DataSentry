@@ -135,19 +135,24 @@ class CleaningWorkflowManager:
         self,
         strategy: str,
         target_columns: List[str],
-        multiplier: float = 1.5
+        method: str = "IQR",
+        multiplier: float = 1.5,
+        threshold: float = 3.5
     ) -> Dict[str, Any]:
-        """Apply outlier clipping, dropping, or nullification."""
+        """Apply outlier clipping, dropping, or nullification using IQR, Z-Score, or Modified Z-Score (MAD)."""
         new_df, summary = remediate_outliers(
             self._current_df,
             strategy=strategy,
             target_columns=target_columns,
-            multiplier=multiplier
+            method=method,
+            multiplier=multiplier,
+            threshold=threshold
         )
+        param_desc = f"k={multiplier}" if "IQR" in method else f"thresh={threshold}"
         return self._commit_change(
             new_df=new_df,
             action=f"OUTLIER_{strategy.upper()}",
-            description=f"Outlier {strategy} applied on columns {target_columns} (k={multiplier})",
+            description=f"Outlier {strategy} applied via {method} on {target_columns} ({param_desc})",
             details=summary
         )
 
